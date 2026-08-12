@@ -1,145 +1,164 @@
-
-
-        <!DOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="bn">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Abdullah Musafir Media</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f2f7f2;
-            color: #222;
+            background: #f1f7f1;
+            color: #333;
         }
 
+        /* Header */
         header {
             background: darkgreen;
             color: white;
             text-align: center;
-            padding: 35px 15px;
+            padding: 25px 15px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 30px;
+            font-size: 28px;
         }
 
         header p {
-            margin-top: 10px;
-            font-size: 16px;
+            margin: 8px 0 0;
+            font-size: 14px;
         }
 
+        /* Menu */
         nav {
-            background-color: white;
-            padding: 12px;
+            background: white;
             text-align: center;
-            box-shadow: 0 2px 8px #ccc;
+            padding: 12px;
+            box-shadow: 0 2px 6px #ccc;
         }
 
         nav a {
             display: inline-block;
-            padding: 10px 14px;
-            margin: 4px;
-            background-color: darkgreen;
+            background: green;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            padding: 9px 14px;
+            margin: 4px;
+            border-radius: 5px;
+            font-size: 13px;
         }
 
         nav a:hover {
-            background-color: green;
+            background: darkgreen;
         }
 
-        .hero {
-            text-align: center;
-            padding: 45px 20px;
-        }
-
-        .hero h2 {
-            color: darkgreen;
-            font-size: 28px;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: 15px auto;
-            line-height: 1.7;
-        }
-
-        .youtube-image {
-            width: 90%;
-            max-width: 500px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: darkgreen;
-            color: white;
-            padding: 13px 22px;
-            margin-top: 20px;
-            border-radius: 7px;
-            text-decoration: none;
-        }
-
-        .button:hover {
-            background-color: green;
-        }
-
-        .cards {
+        /* Main */
+        main {
             max-width: 900px;
             margin: auto;
-            padding: 20px;
-            display: flex;
+            padding: 30px 15px;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            color: darkgreen;
+            font-size: 25px;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
         }
 
         .card {
-            background-color: white;
-            padding: 25px;
-            width: 260px;
+            background: white;
+            padding: 25px 20px;
             border-radius: 10px;
-            box-shadow: 0 3px 10px #ddd;
             text-align: center;
+            box-shadow: 0 2px 10px #ddd;
+            min-height: 150px;
         }
 
         .card h3 {
             color: darkgreen;
+            margin-top: 0;
+            font-size: 19px;
         }
 
+        .card p {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 8px;
+            background: green;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .card a:hover {
+            background: darkgreen;
+        }
+
+        /* YouTube Button */
+        .youtube {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .youtube a {
+            background: darkgreen;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        /* Footer */
         footer {
-            margin-top: 30px;
-            background-color: darkgreen;
+            background: darkgreen;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px 10px;
+            margin-top: 30px;
         }
 
+        footer p {
+            margin: 7px;
+            font-size: 13px;
+        }
+
+        /* Mobile */
         @media (max-width: 600px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
             header h1 {
-                font-size: 24px;
-            }
-
-            nav a {
-                display: block;
-                margin: 7px 0;
-            }
-
-            .hero h2 {
                 font-size: 23px;
             }
 
-            .card {
-                width: 100%;
+            nav a {
+                padding: 8px 11px;
             }
         }
     </style>
@@ -147,83 +166,116 @@
 
 <body>
 
-    <header>
-        <h1>Abdullah Musafir Media</h1>
-        <p>ইসলামিক জ্ঞান • প্রযুক্তি • শিক্ষা</p>
-    </header>
+<header>
+    <h1>Abdullah Musafir Media</h1>
+    <p>ইসলামিক জ্ঞান • প্রযুক্তি • শিক্ষা</p>
+</header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="articles.html">Articles</a>
-        <a href="youtube.html">YouTube</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="articles.html">Articles</a>
+    <a href="youtube.html">YouTube</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
-    <section class="hero">
+<main>
 
+    <section class="welcome">
         <h2>আসসালামু আলাইকুম</h2>
 
         <p>
             Abdullah Musafir Media-তে আপনাকে স্বাগতম।
-            ইসলামিক জ্ঞান, প্রযুক্তি এবং শিক্ষামূলক বিষয় নিয়ে
-            আমাদের এই ছোট্ট প্রচেষ্টা।
+            ইসলামিক জ্ঞান, শিক্ষা, প্রযুক্তি এবং বিভিন্ন
+            শিক্ষামূলক বিষয় নিয়ে আমাদের এই ছোট্ট প্রচেষ্টা।
         </p>
-
-        <img class="youtube-image"
-             src="youtube.jpg"
-             alt="Abdullah Musafir Media">
-
-        <br>
-
-        <a class="button"
-           href="https://www.youtube.com/@musafir-ab"
-           target="_blank">
-            🎥 আমাদের YouTube চ্যানেল দেখুন
-        </a>
-
     </section>
+
+    <div class="youtube">
+        <a href="youtube.html">🎥 আমাদের YouTube চ্যানেল দেখুন</a>
+    </div>
 
     <section class="cards">
 
         <div class="card">
-            <h3>📖 ইসলামিক জ্ঞান</h3>
+            <h3>📖 ইসলামী জ্ঞান</h3>
             <p>
-                ইসলামিক জ্ঞান ও শিক্ষামূলক বিষয় নিয়ে
-                বিভিন্ন লেখা ও তথ্য।
+                কুরআন, হাদিস, আকিদা, ইসলামের ইতিহাস
+                এবং বিভিন্ন গুরুত্বপূর্ণ ইসলামিক বিষয়।
             </p>
-            <div class="card">
-    <h3>🕌 ইসলামিক আলোচনা</h3>
-    <p>
-        কুরআন-হাদিস, আকীদা, ইবাদত, আখলাক,
-        ইসলামের ইতিহাস ও বিভিন্ন ইসলামিক বিষয় নিয়ে আলোচনা।
-    </p>
-</div>
-<div class="card">
-    <h3>📚 দ্বীনি শিক্ষা</h3>
-    <p>
-        ইসলাম সম্পর্কে উপকারী জ্ঞান, আমল ও
-        জীবন গঠনের বিভিন্ন শিক্ষামূলক বিষয়।
-    </p>
-</div>
-            </p>
+            <a href="articles.html">আরও দেখুন</a>
         </div>
 
         <div class="card">
             <h3>🎓 শিক্ষা</h3>
             <p>
-                ইংরেজি, আরবি ও বিভিন্ন
-                শিক্ষামূলক বিষয়।
+                ইংরেজি, আরবি এবং বিভিন্ন শিক্ষামূলক
+                বিষয় নিয়ে সহজভাবে শেখার সুযোগ।
             </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 প্রযুক্তি</h3>
+            <p>
+                কম্পিউটার, ওয়েবসাইট, HTML, CSS,
+                GitHub এবং আধুনিক প্রযুক্তি সম্পর্কে শেখা।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🕌 দ্বীনি শিক্ষা</h3>
+            <p>
+                ইসলামের গুরুত্বপূর্ণ বিষয়, আমল,
+                দোয়া এবং সুন্দর ইসলামী শিক্ষা।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>👤 আমাদের পরিচয়</h3>
+            <p>
+                Abdullah Musafir Media একটি শিক্ষামূলক
+                প্ল্যাটফর্ম। ইসলামিক জ্ঞান, শিক্ষা ও
+                প্রযুক্তি সহজভাবে মানুষের কাছে পৌঁছে দেওয়াই
+                আমাদের উদ্দেশ্য।
+            </p>
+            <a href="about.html">পরিচয় দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>✍️ গল্প ও লেখা</h3>
+            <p>
+                শিক্ষামূলক গল্প, ইসলামিক লেখা,
+                প্রবন্ধ ও বিভিন্ন সুন্দর বিষয় পড়ুন।
+            </p>
+            <a href="articles.html">লেখাগুলো দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>🌍 সাধারণ জ্ঞান</h3>
+            <p>
+                দেশ-বিদেশ, ইতিহাস, বিজ্ঞান ও
+                দৈনন্দিন জীবনের বিভিন্ন সাধারণ জ্ঞান।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎥 ভিডিও</h3>
+            <p>
+                ইসলামিক আলোচনা, শিক্ষা, প্রযুক্তি
+                এবং বিভিন্ন বিষয়ের ভিডিও দেখতে আমাদের
+                YouTube চ্যানেল ভিজিট করুন।
+            </p>
+            <a href="youtube.html">ভিডিও দেখুন</a>
         </div>
 
     </section>
 
-    <footer>
-        <p>© 2026 Abdullah Musafir Media</p>
-        <p>জ্ঞান অর্জন করুন • জ্ঞান ছড়িয়ে দিন</p>
-    </footer>
+</main>
+
+<footer>
+    <p>© 2026 Abdullah Musafir Media</p>
+    <p>জ্ঞান অর্জন করুন • অন্যকে উপকৃত করুন</p>
+</footer>
 
 </body>
-
 </html>
