@@ -1,12 +1,399 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YouTube | Abdullah Musafir Media</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f8f4;
+            color: #173b2a;
+            line-height: 1.7;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #075e35, #0b8f55);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 15px 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            color: #075e35;
+            font-weight: bold;
+            margin: 5px 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        nav a:hover {
+            background: #075e35;
+            color: white;
+        }
+
+        /* Main */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 18px;
+        }
+
+        .hero {
+            background: white;
+            text-align: center;
+            padding: 45px 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .youtube-icon {
+            width: 85px;
+            height: 60px;
+            background: #ff0000;
+            border-radius: 18px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .youtube-icon span {
+            color: white;
+            font-size: 32px;
+        }
+
+        .hero h2 {
+            color: #075e35;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+            color: #555;
+        }
+
+        /* Button */
+        .youtube-btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: #e60000;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .youtube-btn:hover {
+            background: #b80000;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+        }
+
+        .section h2 {
+            color: #075e35;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .section p {
+            text-align: center;
+            color: #555;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f1f8f4;
+            padding: 25px 18px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #dcefe4;
+        }
+
+        .card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #075e35;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        /* Goal */
+        .goal {
+            background: linear-gradient(135deg, #075e35, #0b8f55);
+            color: white;
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+        }
+
+        .goal h2 {
+            margin-bottom: 15px;
+        }
+
+        .goal p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+        }
+
+        /* Footer */
+        footer {
+            background: #063d24;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin: 3px;
+                padding: 7px 8px;
+            }
+
+            .section {
+                padding: 22px 15px;
+            }
+        }
+    </style>
+</head>
+
 <body>
 
-<h1>আমাদের YouTube</h1>
+    <!-- Header -->
+    <header>
+        <h1>Abdullah Musafir Media</h1>
+        <p>ইসলামের সুমহান বার্তা ছড়িয়ে দেওয়ার একটি ক্ষুদ্র প্রচেষ্টা</p>
+    </header>
 
-<p>এখানে আমাদের শিক্ষামূলক ভিডিওগুলো থাকবে।</p>
 
-<a href="index.html">Home-এ ফিরে যান</a>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About</a>
+        <a href="articles.html">📚 Articles</a>
+        <a href="youtube.html">▶️ YouTube</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="youtube-icon">
+                <span>▶</span>
+            </div>
+
+            <h2>আমাদের YouTube চ্যানেল</h2>
+
+            <p>
+                <strong>Abdullah Musafir Media</strong> —
+                ইসলামের সুমহান বার্তা মানুষের কাছে পৌঁছে দেওয়া
+                এবং ইসলামের দাওয়াত ও শিক্ষা ছড়িয়ে দেওয়ার
+                একটি ক্ষুদ্র প্রচেষ্টা।
+            </p>
+
+            <!-- এখানে আপনার YouTube Channel Link বসাবেন -->
+            <a class="youtube-btn"
+               href="YOUR-YOUTUBE-LINK-HERE"
+               target="_blank">
+                ▶ চ্যানেল দেখুন
+            </a>
+
+        </section>
+
+
+        <!-- About Channel -->
+        <section class="section">
+
+            <h2>🌿 আমাদের সম্পর্কে</h2>
+
+            <p>
+                Abdullah Musafir Media-এর মাধ্যমে ইসলামিক শিক্ষা,
+                নসিহত, গল্প, ইতিহাস এবং উপকারী জ্ঞান মানুষের কাছে
+                পৌঁছে দেওয়ার চেষ্টা করা হয়।
+            </p>
+
+        </section>
+
+
+        <!-- Content -->
+        <section class="section">
+
+            <h2>📚 আমাদের বিষয়বস্তু</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">📖</div>
+                    <h3>ইসলামিক শিক্ষা</h3>
+                    <p>
+                        ইসলাম সম্পর্কে উপকারী ও শিক্ষামূলক বিষয়।
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🌙</div>
+                    <h3>নসিহত</h3>
+                    <p>
+                        ঈমান ও আমল বৃদ্ধির জন্য উপকারী নসিহত।
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📜</div>
+                    <h3>ইসলামিক গল্প</h3>
+                    <p>
+                        শিক্ষা ও অনুপ্রেরণামূলক ইসলামিক গল্প।
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🕌</div>
+                    <h3>ইসলামের ইতিহাস</h3>
+                    <p>
+                        ইসলামের ইতিহাস ও গুরুত্বপূর্ণ ঘটনা।
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Goal -->
+        <section class="goal">
+
+            <h2>🎯 আমাদের লক্ষ্য</h2>
+
+            <p>
+                ইসলামের সুন্দর ও সুমহান বার্তা মানুষের কাছে পৌঁছে দেওয়া
+                এবং উপকারী জ্ঞান ছড়িয়ে দেওয়ার মাধ্যমে সমাজের জন্য
+                একটি কল্যাণকর ভূমিকা রাখা।
+            </p>
+
+        </section>
+
+
+        <!-- Call To Action -->
+        <section class="hero">
+
+            <h2>🤝 আমাদের সঙ্গে থাকুন</h2>
+
+            <p>
+                ইসলামিক ও শিক্ষামূলক ভিডিও পেতে আমাদের YouTube
+                চ্যানেলটি দেখুন এবং উপকারী বিষয়গুলো অন্যদের
+                কাছে পৌঁছে দিতে সহযোগিতা করুন।
+            </p>
+
+            <a class="youtube-btn"
+               href="YOUR-YOUTUBE-LINK-HERE"
+               target="_blank">
+                🔔 Abdullah Musafir Media
+            </a>
+
+        </section>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p><strong>Abdullah Musafir Media</strong></p>
+
+        <p>
+            ইসলামের সুমহান বার্তা ছড়িয়ে দেওয়ার একটি ক্ষুদ্র প্রচেষ্টা।
+        </p>
+
+        <p>© 2026 Abdullah Musafir Media</p>
+
+    </footer>
 
 </body>
 </html>
