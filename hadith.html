@@ -1,219 +1,689 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>হাদিস | Abdullah Musafir Media</title>
+<title>হাদিসের আলো | Islamic Hadith</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f2f7f3;
-            color: #222;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header {
-            background: darkgreen;
-            color: white;
-            text-align: center;
-            padding: 25px 15px;
-        }
+body{
+    font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
+    background:
+        radial-gradient(circle at top,#183d35 0%,#071b17 42%,#020c0a 100%);
+    color:#f5fff9;
+    line-height:1.9;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-        }
+/* ===== HEADER ===== */
 
-        header p {
-            margin-top: 8px;
-        }
+.hero{
+    min-height:360px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+    overflow:hidden;
+}
 
-        nav {
-            background: white;
-            padding: 12px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+.hero::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(71,211,155,.12);
+    left:-100px;
+    top:-100px;
+    filter:blur(8px);
+}
 
-        nav a {
-            text-decoration: none;
-            color: darkgreen;
-            font-weight: bold;
-            margin: 5px 8px;
-            display: inline-block;
-        }
+.hero::after{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    background:rgba(231,194,76,.10);
+    right:-100px;
+    bottom:-100px;
+    filter:blur(8px);
+}
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+.hero-content{
+    position:relative;
+    z-index:2;
+}
 
-        .title {
-            text-align: center;
-            color: darkgreen;
-            margin-bottom: 25px;
-        }
+.hadith-icon{
+    font-size:68px;
+    margin-bottom:8px;
+    filter:drop-shadow(0 0 20px rgba(247,215,120,.3));
+}
 
-        .hadith {
-            background: white;
-            margin-bottom: 20px;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            border-left: 5px solid darkgreen;
-        }
+.hero h1{
+    font-size:44px;
+    color:#f6d879;
+    text-shadow:0 0 25px rgba(246,216,121,.2);
+}
 
-        .hadith h2 {
-            color: darkgreen;
-            margin-top: 0;
-        }
+.hero p{
+    color:#bfe8d5;
+    font-size:17px;
+    margin-top:8px;
+}
 
-        .arabic {
-            direction: rtl;
-            text-align: right;
-            font-size: 25px;
-            line-height: 2;
-            font-family: "Traditional Arabic", "Amiri", serif;
-            background: #f8fbf8;
-            padding: 15px;
-            border-radius: 8px;
-        }
+/* ===== MAIN ===== */
 
-        .translation {
-            font-size: 18px;
-            line-height: 1.9;
-            margin-top: 15px;
-        }
+.container{
+    width:92%;
+    max-width:950px;
+    margin:auto;
+    padding:30px 0 70px;
+}
 
-        .source {
-            color: #555;
-            font-weight: bold;
-            margin-top: 15px;
-        }
+/* ===== CARD ===== */
 
-        footer {
-            background: darkgreen;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+.card{
+    background:rgba(10,48,40,.86);
+    border:1px solid rgba(126,222,180,.18);
+    border-radius:26px;
+    padding:30px;
+    margin-bottom:26px;
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.28),
+        inset 0 1px rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.card-title{
+    color:#f5d77b;
+    font-size:27px;
+    margin-bottom:16px;
+}
+
+.card p{
+    color:#e0f5e9;
+    font-size:16px;
+    margin-bottom:16px;
+}
+
+.highlight{
+    margin-top:20px;
+    padding:20px;
+    border-left:4px solid #e6c85f;
+    background:rgba(230,200,95,.07);
+    border-radius:14px;
+    color:#e5f8ed;
+}
+
+/* ===== INFO ===== */
+
+.section-title{
+    text-align:center;
+    color:#f5d77b;
+    font-size:28px;
+    margin:38px 0 22px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:17px;
+}
+
+.info-box{
+    background:linear-gradient(
+        145deg,
+        rgba(21,75,61,.96),
+        rgba(7,35,29,.96)
+    );
+    border:1px solid rgba(123,218,174,.16);
+    border-radius:21px;
+    padding:21px;
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+    border-color:rgba(246,215,121,.45);
+    box-shadow:0 12px 35px rgba(0,0,0,.3);
+}
+
+.info-box .icon{
+    font-size:31px;
+}
+
+.info-box h3{
+    color:#f5d77b;
+    font-size:18px;
+    margin:4px 0;
+}
+
+.info-box p{
+    color:#b9dfce;
+    font-size:14px;
+    margin:0;
+}
+
+/* ===== DISCUSSION ===== */
+
+.discussion{
+    position:relative;
+    overflow:hidden;
+}
+
+.discussion::before{
+    content:"ﷺ";
+    position:absolute;
+    right:20px;
+    top:10px;
+    font-size:55px;
+    color:rgba(246,215,121,.07);
+}
+
+.label{
+    display:inline-block;
+    padding:7px 15px;
+    border-radius:30px;
+    background:rgba(229,200,100,.11);
+    color:#f5d77b;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.discussion h2{
+    color:#f8d978;
+    font-size:31px;
+    margin-bottom:20px;
+}
+
+/* ===== HADITH ===== */
+
+.hadith-box{
+    margin:25px 0;
+    padding:28px 20px;
+    border-radius:22px;
+    text-align:center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(229,200,100,.08),
+            rgba(35,110,82,.13)
+        );
+    border:1px solid rgba(229,200,100,.22);
+    box-shadow:inset 0 1px rgba(255,255,255,.04);
+}
+
+.arabic-intro{
+    direction:rtl;
+    font-family:"Amiri","Noto Naskh Arabic",serif;
+    font-size:20px;
+    color:#dff4e9;
+    margin-bottom:18px;
+}
+
+.arabic-hadith{
+    direction:rtl;
+    font-family:"Amiri","Noto Naskh Arabic",serif;
+    font-size:34px;
+    line-height:2.2;
+    color:#f6d879;
+    text-shadow:0 0 18px rgba(246,215,121,.12);
+}
+
+.meaning{
+    margin-top:20px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.09);
+    color:#eaf9f1;
+    font-size:17px;
+}
+
+.source{
+    display:block;
+    margin-top:12px;
+    color:#9ed9bd;
+    font-size:14px;
+}
+
+/* ===== LESSON ===== */
+
+.lesson{
+    background:rgba(54,139,101,.10);
+    border:1px solid rgba(118,215,169,.16);
+    border-radius:20px;
+    padding:22px;
+    margin-top:20px;
+}
+
+.lesson h3{
+    color:#f5d77b;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.lesson ul{
+    padding-left:22px;
+    color:#e1f5ea;
+}
+
+.lesson li{
+    margin:7px 0;
+}
+
+/* ===== ADD NEW ===== */
+
+.add-box{
+    border:2px dashed rgba(246,215,121,.25);
+    background:rgba(246,215,121,.035);
+}
+
+.add-box h2{
+    color:#f6d879;
+}
+
+.add-box p{
+    color:#b9dfce;
+}
+
+/* ===== HOME BUTTON ===== */
+
+.home-area{
+    text-align:center;
+    margin:40px 0 10px;
+}
+
+.home-btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:13px 30px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#d7b84f,#f5db83);
+    color:#122c23;
+    font-size:17px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.home-btn:hover{
+    transform:translateY(-3px) scale(1.02);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px 15px;
+    background:rgba(0,0,0,.28);
+    color:#9bcbb5;
+    font-size:14px;
+}
+
+footer strong{
+    color:#f5d77b;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:650px){
+
+    .hero{
+        min-height:300px;
+    }
+
+    .hadith-icon{
+        font-size:52px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .card{
+        padding:21px;
+        border-radius:21px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:24px;
+    }
+
+    .discussion h2{
+        font-size:26px;
+    }
+
+    .arabic-hadith{
+        font-size:27px;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>📖 হাদিস</h1>
-    <p>Abdullah Musafir Media</p>
+<!-- ================= HEADER ================= -->
+
+<header class="hero">
+    <div class="hero-content">
+
+        <div class="hadith-icon">📜</div>
+
+        <h1>হাদিসের আলো</h1>
+
+        <p>
+            নববী আদর্শ • সুন্দর জীবন • উত্তম চরিত্র
+        </p>
+
+    </div>
 </header>
 
-<nav>
-    <a href="index.html">হোম</a>
-    <a href="about.html">পরিচিতি</a>
-    <a href="articles.html">আর্টিকেল</a>
-    <a href="hadith.html">হাদিস</a>
-    <a href="youtube.html">YouTube</a>
-    <a href="contact.html">যোগাযোগ</a>
-</nav>
 
-<div class="container">
+<main class="container">
 
-    <h1 class="title">🌙 নির্বাচিত হাদিস</h1>
 
-    <div class="hadith">
-        <h2>১. নিয়তের গুরুত্ব</h2>
+<!-- ================= INTRO ================= -->
 
-        <div class="arabic">
-            إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
-        </div>
+<section class="card">
 
-        <div class="translation">
-            “নিশ্চয়ই সকল কাজ নিয়তের ওপর নির্ভরশীল। আর প্রত্যেক ব্যক্তি তাই পাবে, যা সে নিয়ত করেছে।”
-        </div>
+    <h2 class="card-title">🌿 হাদিসের আলো</h2>
 
-        <div class="source">
-            📚 সহিহ বুখারি: ১
-        </div>
+    <p>
+        নববী জীবন অনুসরণ না করলে সেই জীবনে প্রকৃত শান্তি
+        ও কল্যাণ পাওয়া কঠিন। সুন্দর, আদর্শ ও শান্তিপূর্ণ জীবন
+        গঠনের জন্য রাসূলুল্লাহ ﷺ-এর সুন্নাহ ও হাদিসের অনুসরণ
+        করা অত্যন্ত গুরুত্বপূর্ণ।
+    </p>
+
+    <p>
+        রাসূলুল্লাহ ﷺ-এর জীবন আমাদের জন্য সর্বোত্তম আদর্শ।
+        তাঁর কথা, কাজ, আচার-আচরণ ও নসিহতের মধ্যে রয়েছে
+        মানবজীবনের জন্য অমূল্য শিক্ষা ও দিকনির্দেশনা।
+    </p>
+
+    <p>
+        তাই একটি সুন্দর ও আদর্শ জীবন গড়ার জন্য হাদিসের
+        শিক্ষা জানা এবং তা নিজের জীবনে বাস্তবায়ন করা
+        আমাদের কর্তব্য।
+    </p>
+
+    <div class="highlight">
+
+        📜 এখানে বিভিন্ন হাদিসের আলোকে আমাদের জীবনে
+        করণীয় গুরুত্বপূর্ণ বিষয়, উত্তম চরিত্র, ইবাদত,
+        মানুষের সঙ্গে সুন্দর আচরণ এবং দৈনন্দিন জীবনের
+        প্রয়োজনীয় শিক্ষা তুলে ধরা হবে।
+
+        <br><br>
+
+        ✨ সময় ও সুযোগ অনুযায়ী নতুন নতুন হাদিস ও
+        বিষয়ভিত্তিক আলোচনা এখানে যুক্ত করা হবে।
+
     </div>
 
+</section>
 
-    <div class="hadith">
-        <h2>২. উত্তম মুসলিম</h2>
 
-        <div class="arabic">
-            الْمُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ
-        </div>
+<!-- ================= WHAT WILL BE HERE ================= -->
 
-        <div class="translation">
-            “মুসলিম সে-ই, যার জিহ্বা ও হাত থেকে অন্য মুসলিমরা নিরাপদ থাকে।”
-        </div>
+<h2 class="section-title">
+    📌 এই বিভাগে যা থাকবে
+</h2>
 
-        <div class="source">
-            📚 সহিহ বুখারি: ১০
-        </div>
+<section class="grid">
+
+    <div class="info-box">
+        <div class="icon">📜</div>
+        <h3>বিষয়ভিত্তিক হাদিস</h3>
+        <p>
+            বিভিন্ন গুরুত্বপূর্ণ বিষয়ের ওপর নির্ভরযোগ্য হাদিস।
+        </p>
     </div>
 
-
-    <div class="hadith">
-        <h2>৩. দয়া</h2>
-
-        <div class="arabic">
-            مَنْ لَا يَرْحَمْ لَا يُرْحَمْ
-        </div>
-
-        <div class="translation">
-            “যে দয়া করে না, তার প্রতি দয়া করা হবে না।”
-        </div>
-
-        <div class="source">
-            📚 সহিহ বুখারি: ৫৯৯৭
-        </div>
+    <div class="info-box">
+        <div class="icon">🌿</div>
+        <h3>হাদিসের শিক্ষা</h3>
+        <p>
+            হাদিস থেকে পাওয়া প্রয়োজনীয় শিক্ষা ও নসিহত।
+        </p>
     </div>
 
-
-    <div class="hadith">
-        <h2>৪. ভালো কথা বলা</h2>
-
-        <div class="arabic">
-            مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ
-        </div>
-
-        <div class="translation">
-            “যে ব্যক্তি আল্লাহ ও শেষ দিনের প্রতি ঈমান রাখে, সে যেন ভালো কথা বলে অথবা নীরব থাকে।”
-        </div>
-
-        <div class="source">
-            📚 সহিহ বুখারি: ৬০১৮; সহিহ মুসলিম: ৪৭
-        </div>
+    <div class="info-box">
+        <div class="icon">❤️</div>
+        <h3>সুন্দর চরিত্র</h3>
+        <p>
+            উত্তম আখলাক ও মানুষের সঙ্গে সুন্দর আচরণ।
+        </p>
     </div>
 
+    <div class="info-box">
+        <div class="icon">🕌</div>
+        <h3>ইবাদত ও আমল</h3>
+        <p>
+            ইবাদত ও দৈনন্দিন আমল সম্পর্কে নববী শিক্ষা।
+        </p>
+    </div>
 
-    <div class="hadith">
-        <h2>৫. উত্তম চরিত্র</h2>
+    <div class="info-box">
+        <div class="icon">🤝</div>
+        <h3>মানুষের সঙ্গে আচরণ</h3>
+        <p>
+            পরিবার, প্রতিবেশী ও সমাজের মানুষের হক ও আচরণ।
+        </p>
+    </div>
 
-        <div class="arabic">
+    <div class="info-box">
+        <div class="icon">💡</div>
+        <h3>জীবনের দিকনির্দেশনা</h3>
+        <p>
+            হাদিসের আলোকে সুন্দর জীবন গঠনের শিক্ষা।
+        </p>
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     🌿 প্রথম আলোচনা
+================================================== -->
+
+<section class="card discussion">
+
+    <span class="label">
+        🌿 আজকের আলোচনা
+    </span>
+
+    <h2>
+        সুন্দর চরিত্র: একজন মুমিনের সৌন্দর্য
+    </h2>
+
+    <p>
+        রাসূলুল্লাহ ﷺ-এর শিক্ষা থেকে বোঝা যায়, একজন মানুষের
+        প্রকৃত সৌন্দর্য শুধু বাহ্যিক রূপে নয়; বরং তার চরিত্র,
+        আচরণ, কথা ও মানুষের সঙ্গে ব্যবহারের মধ্যে প্রকাশ পায়।
+    </p>
+
+    <div class="hadith-box">
+
+        <div class="arabic-intro">
+            عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ:
+            قَالَ رَسُولُ اللَّهِ ﷺ:
+        </div>
+
+        <div class="arabic-hadith">
             أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا
         </div>
 
-        <div class="translation">
-            “মুমিনদের মধ্যে ঈমানে পরিপূর্ণ সেই ব্যক্তি, যার চরিত্র সবচেয়ে উত্তম।”
+        <div class="meaning">
+
+            <strong>বাংলা অর্থ:</strong><br>
+
+            “মুমিনদের মধ্যে ঈমানে পরিপূর্ণ সেই ব্যক্তি,
+            যার চরিত্র সবচেয়ে সুন্দর।”
+
+            <span class="source">
+                📚 সূত্র: সুনান আবু দাউদ, ৪৬৮২
+            </span>
+
         </div>
 
-        <div class="source">
-            📚 সুনান আবু দাউদ: ৪৬৮২
-        </div>
     </div>
+
+
+    <h3 class="card-title">
+        🌱 হাদিসের শিক্ষা
+    </h3>
+
+    <p>
+        এই হাদিস আমাদের শেখায় যে সুন্দর চরিত্র ঈমানের
+        গুরুত্বপূর্ণ অংশ। মানুষের সঙ্গে নম্রভাবে কথা বলা,
+        কাউকে কষ্ট না দেওয়া, ক্ষমা করা, অহংকার থেকে দূরে
+        থাকা এবং অন্যের প্রতি ভালো আচরণ করা একজন
+        মুমিনের গুরুত্বপূর্ণ গুণ।
+    </p>
+
+    <p>
+        সুন্দর চরিত্র শুধু পরিচিত মানুষের সঙ্গে ভালো
+        ব্যবহারের নাম নয়। পরিবার, আত্মীয়, প্রতিবেশী,
+        বন্ধু এবং সমাজের অন্যান্য মানুষের সঙ্গেও উত্তম
+        আচরণ করা উচিত।
+    </p>
+
+
+    <div class="lesson">
+
+        <h3>🕌 আমাদের করণীয়</h3>
+
+        <ul>
+            <li>মানুষের সঙ্গে নম্রভাবে কথা বলা।</li>
+            <li>কাউকে অপমান বা কষ্ট না দেওয়া।</li>
+            <li>রাগের সময় নিজেকে নিয়ন্ত্রণ করা।</li>
+            <li>অন্যের ভুল ক্ষমা করার চেষ্টা করা।</li>
+            <li>অহংকার থেকে দূরে থাকা।</li>
+            <li>সত্য কথা বলা ও আমানত রক্ষা করা।</li>
+            <li>বাবা-মা, পরিবার ও প্রতিবেশীর সঙ্গে সুন্দর আচরণ করা।</li>
+        </ul>
+
+    </div>
+
+
+    <h3 class="card-title" style="margin-top:25px;">
+        💡 আমাদের জন্য শিক্ষা
+    </h3>
+
+    <p>
+        একজন মুসলিমের চরিত্র তার ইসলামী শিক্ষার সুন্দর
+        প্রতিফলন। তাই শুধু ইবাদত করাই নয়, মানুষের সঙ্গে
+        আমাদের আচরণও সুন্দর হওয়া প্রয়োজন।
+    </p>
+
+    <div class="highlight">
+
+        🌸 সুন্দর কথা বলুন।<br>
+        🤝 মানুষের উপকার করুন।<br>
+        ❤️ ক্ষমাশীল হওয়ার চেষ্টা করুন।<br>
+        🌿 অহংকার থেকে দূরে থাকুন।<br>
+        🕌 রাসূলুল্লাহ ﷺ-এর আদর্শ অনুসরণ করুন।
+
+    </div>
+
+    <p style="text-align:center;margin-top:22px;">
+
+        <strong>
+            আল্লাহ তাআলা আমাদের সবাইকে উত্তম চরিত্র অর্জন
+            করার এবং রাসূলুল্লাহ ﷺ-এর আদর্শ অনুসরণ করার
+            তাওফিক দান করুন। আমিন।
+        </strong>
+
+    </p>
+
+</section>
+
+
+<!-- ==================================================
+     ➕ নতুন আলোচনা সরাসরি এখানে যোগ করবেন
+     
+     পরবর্তীতে আমি আপনাকে যে নতুন আলোচনা দেব,
+     সেটি এই জায়গায় বসালেই হবে।
+================================================== -->
+
+<section class="card add-box">
+
+    <h2>
+        ✨ আরও হাদিসের আলোচনা
+    </h2>
+
+    <p>
+        সময় ও সুযোগ অনুযায়ী নতুন নতুন বিষয় এখানে
+        যুক্ত করা হবে। প্রতিটি বিষয় আলাদা সুন্দর
+        আলোচনার আকারে সাজানো হবে।
+    </p>
+
+    <div class="highlight">
+
+        📌 <strong>নতুন আলোচনা যোগ করার জায়গা</strong><br><br>
+
+        এখানে পরবর্তী হাদিসের আলোচনা সরাসরি বসবে।
+        পুরোনো আলোচনাগুলো কাটতে হবে না।
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOME BUTTON ================= -->
+
+<div class="home-area">
+
+    <a href="index.html" class="home-btn">
+        🏠 হোম পেজে ফিরে যান
+    </a>
 
 </div>
 
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    <p>© 2026 Abdullah Musafir Media</p>
-    <p>ইসলামী জ্ঞান প্রচারে আমাদের ছোট্ট প্রচেষ্টা 🌙</p>
+
+    <p>
+        📜 <strong>হাদিসের আলো</strong>
+    </p>
+
+    <p>
+        নববী আদর্শের আলোকে সুন্দর জীবন গড়ি
+    </p>
+
 </footer>
+
 
 </body>
 </html>
