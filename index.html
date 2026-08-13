@@ -18,7 +18,6 @@
             color: #333;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, #006400, #008000);
             color: white;
@@ -36,7 +35,6 @@
             font-size: 15px;
         }
 
-        /* Navigation */
         nav {
             background: white;
             text-align: center;
@@ -62,14 +60,12 @@
             background: #005500;
         }
 
-        /* Main */
         main {
             max-width: 1000px;
             margin: auto;
             padding: 30px 15px;
         }
 
-        /* Welcome */
         .welcome {
             background: white;
             padding: 30px 20px;
@@ -126,7 +122,12 @@
             background: #005500;
         }
 
-        /* YouTube */
+        #searchResult {
+            margin-top: 15px;
+            color: #b00020;
+            font-weight: bold;
+        }
+
         .youtube {
             text-align: center;
             margin: 25px 0 35px;
@@ -141,14 +142,12 @@
             text-decoration: none;
         }
 
-        /* Section title */
         .section-title {
             text-align: center;
             color: #006400;
             margin: 35px 0 20px;
         }
 
-        /* Cards */
         .cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -194,7 +193,6 @@
             background: #005500;
         }
 
-        /* Highlight */
         .highlight {
             background: #e8f5e9;
             border-left: 5px solid #008000;
@@ -209,7 +207,6 @@
             margin-top: 0;
         }
 
-        /* Footer */
         footer {
             background: #005500;
             color: white;
@@ -223,7 +220,6 @@
             font-size: 13px;
         }
 
-        /* Mobile */
         @media (max-width: 600px) {
 
             header h1 {
@@ -265,6 +261,9 @@
     <a href="amal.html">📿 আমল</a>
     <a href="quran.html">📖 কুরআন</a>
     <a href="hadith.html">📜 হাদিস</a>
+    <a href="dua.html">🤲 দোয়া</a>
+    <a href="stories.html">🌙 গল্প</a>
+    <a href="books.html">📚 বই</a>
     <a href="contact.html">📞 Contact</a>
 </nav>
 
@@ -289,7 +288,8 @@
         <input
             type="text"
             id="searchInput"
-            placeholder="যেমন: ঘুমের দোয়া, নামাজ, হাদিস..."
+            placeholder="যেমন: হাদিস, আমল, দোয়া, গল্প, বই..."
+            onkeydown="if(event.key === 'Enter') searchSite()"
         >
 
         <button onclick="searchSite()">খুঁজুন</button>
@@ -298,7 +298,6 @@
 
     </section>
 
-    <!-- YouTube -->
     <div class="youtube">
         <a href="youtube.html">
             🎥 আমাদের YouTube চ্যানেল দেখুন
@@ -417,7 +416,6 @@
 
     </section>
 
-    <!-- Today's Advice -->
     <section class="highlight">
 
         <h2>🌿 আজকের নসিহত</h2>
@@ -430,7 +428,6 @@
 
     </section>
 
-    <!-- Latest -->
     <section class="cards">
 
         <div class="card">
@@ -467,7 +464,6 @@
 
 </footer>
 
-
 <script>
 
 function searchSite() {
@@ -489,55 +485,82 @@ function searchSite() {
         return;
     }
 
-    if (
-        search.includes("আমল") ||
-        search.includes("দোয়া")
-    ) {
+    /* হাদিস */
+    if (search.includes("হাদিস")) {
+
+        window.location.href = "hadith.html";
+        return;
+    }
+
+    /* আমল */
+    if (search.includes("আমল")) {
 
         window.location.href = "amal.html";
+        return;
+    }
 
-    } else if (
+    /* দোয়া */
+    if (
+        search.includes("দোয়া") ||
+        search.includes("দুআ") ||
+        search.includes("দোআ")
+    ) {
+
+        window.location.href = "dua.html";
+        return;
+    }
+
+    /* কুরআন */
+    if (
         search.includes("কুরআন") ||
+        search.includes("কোরআন") ||
         search.includes("আয়াত")
     ) {
 
         window.location.href = "quran.html";
+        return;
+    }
 
-    } else if (
-        search.includes("হাদিস")
-    ) {
-
-        window.location.href = "hadith.html";
-
-    } else if (
-        search.includes("গল্প")
+    /* ইসলামিক গল্প */
+    if (
+        search.includes("গল্প") ||
+        search.includes("কাহিনি") ||
+        search.includes("কাহিনী")
     ) {
 
         window.location.href = "stories.html";
+        return;
+    }
 
-    } else if (
+    /* বই / PDF */
+    if (
         search.includes("বই") ||
-        search.includes("pdf")
+        search.includes("pdf") ||
+        search.includes("পিডিএফ")
     ) {
 
         window.location.href = "books.html";
+        return;
+    }
 
-    } else if (
+    /* প্রবন্ধ / লেখা */
+    if (
         search.includes("প্রবন্ধ") ||
-        search.includes("লেখা")
+        search.includes("লেখা") ||
+        search.includes("আর্টিকেল")
     ) {
 
         window.location.href = "articles.html";
-
-    } else {
-
-        result.innerHTML =
-            "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি।";
-
+        return;
     }
+
+    /* কোনো বিষয় পাওয়া না গেলে */
+
+    result.innerHTML =
+        "দুঃখিত, এই বিষয়টি যোগ করা হয়নি।";
 }
 
 </script>
 
 </body>
-                                               </html>
+</html>
