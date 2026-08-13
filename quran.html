@@ -1,663 +1,621 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>কুরআন | Abdullah Musafir Media</title>
+<title>আল-কুরআন | কোরআনের আলো</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f3f8f4;
-            color: #333;
-        }
+body{
+    font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
+    background:
+        radial-gradient(circle at top,#123d35 0%,#071b17 38%,#03100e 100%);
+    color:#f4fff9;
+    line-height:1.9;
+}
 
-        header {
-            background: linear-gradient(135deg, #006400, #008000);
-            color: white;
-            text-align: center;
-            padding: 38px 15px;
-        }
+/* ===== HEADER ===== */
 
-        header h1 {
-            margin: 0;
-            font-size: 29px;
-        }
+.hero{
+    min-height:330px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+    overflow:hidden;
+}
 
-        header p {
-            margin: 10px 0 0;
-        }
+.hero::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:rgba(61,207,145,.12);
+    top:-100px;
+    left:-80px;
+    filter:blur(5px);
+}
 
-        nav {
-            background: white;
-            text-align: center;
-            padding: 12px 8px;
-            box-shadow: 0 2px 8px #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+.hero::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(231,190,77,.10);
+    right:-70px;
+    bottom:-80px;
+}
 
-        nav a {
-            display: inline-block;
-            background: #008000;
-            color: white;
-            text-decoration: none;
-            padding: 9px 12px;
-            margin: 4px;
-            border-radius: 6px;
-            font-size: 13px;
-        }
+.hero-content{
+    position:relative;
+    z-index:2;
+}
 
-        nav a:hover {
-            background: #005500;
-        }
+.quran-symbol{
+    font-size:60px;
+    margin-bottom:5px;
+    filter:drop-shadow(0 0 18px rgba(255,220,100,.35));
+}
 
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 30px 15px;
-        }
+.hero h1{
+    font-size:42px;
+    color:#f8d878;
+    letter-spacing:1px;
+    text-shadow:0 0 20px rgba(248,216,120,.25);
+}
 
-        .intro {
-            background: white;
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 14px;
-            box-shadow: 0 3px 12px #ddd;
-            margin-bottom: 25px;
-        }
+.hero p{
+    margin-top:8px;
+    color:#bfe8d5;
+    font-size:17px;
+}
 
-        .intro h2 {
-            color: #006400;
-        }
+/* ===== MAIN ===== */
 
-        .intro p {
-            line-height: 1.9;
-        }
+.container{
+    width:92%;
+    max-width:950px;
+    margin:auto;
+    padding:25px 0 60px;
+}
 
-        .search-box {
-            margin: 25px 0;
-            text-align: center;
-        }
+/* ===== INTRO ===== */
 
-        .search-box input {
-            width: 100%;
-            max-width: 600px;
-            padding: 14px 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-            outline: none;
-        }
+.card{
+    background:rgba(12,48,41,.82);
+    border:1px solid rgba(128,224,180,.18);
+    border-radius:24px;
+    padding:28px;
+    margin-bottom:24px;
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.25),
+        inset 0 1px rgba(255,255,255,.04);
+    backdrop-filter:blur(10px);
+}
 
-        .search-box input:focus {
-            border-color: #008000;
-        }
+.card-title{
+    color:#f5d77c;
+    font-size:25px;
+    margin-bottom:15px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #006400;
-            margin: 35px 0 20px;
-        }
+.intro{
+    color:#e1f6eb;
+    font-size:16px;
+}
 
-        .topics {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
+.highlight{
+    margin-top:20px;
+    padding:18px;
+    border-left:4px solid #e5c866;
+    background:rgba(229,200,102,.07);
+    border-radius:12px;
+    color:#dff6e9;
+}
 
-        .topic {
-            background: white;
-            padding: 18px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 10px #ddd;
-            cursor: pointer;
-        }
+/* ===== INFO GRID ===== */
 
-        .topic:hover {
-            transform: translateY(-2px);
-        }
+.section-title{
+    text-align:center;
+    color:#f5d77c;
+    font-size:27px;
+    margin:35px 0 20px;
+}
 
-        .topic h3 {
-            color: #006400;
-            margin: 5px 0;
-        }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
 
-        .verses {
-            display: grid;
-            gap: 20px;
-        }
+.info-box{
+    padding:20px;
+    border-radius:20px;
+    background:linear-gradient(
+        145deg,
+        rgba(18,70,57,.95),
+        rgba(7,36,30,.95)
+    );
+    border:1px solid rgba(125,220,175,.15);
+    transition:.3s;
+}
 
-        .verse {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #ddd;
-        }
+.info-box:hover{
+    transform:translateY(-4px);
+    border-color:rgba(245,215,124,.45);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
 
-        .verse h2 {
-            color: #006400;
-            text-align: center;
-            font-size: 20px;
-        }
+.info-box .icon{
+    font-size:28px;
+}
 
-        .arabic {
-            direction: rtl;
-            text-align: center;
-            font-size: 28px;
-            line-height: 2.2;
-            margin: 20px 5px;
-        }
+.info-box h3{
+    color:#f5d77c;
+    margin:5px 0;
+    font-size:18px;
+}
 
-        .pronunciation {
-            background: #f7faf7;
-            padding: 15px;
-            border-radius: 8px;
-            line-height: 1.9;
-        }
+.info-box p{
+    color:#bfe4d3;
+    font-size:14px;
+}
 
-        .meaning {
-            background: #f7faf7;
-            padding: 15px;
-            border-radius: 8px;
-            line-height: 1.9;
-            margin-top: 12px;
-        }
+/* ===== DISCUSSION ===== */
 
-        .reference {
-            background: #e8f5e9;
-            border-left: 4px solid #008000;
-            padding: 13px;
-            margin-top: 15px;
-            line-height: 1.7;
-            font-size: 14px;
-        }
+.discussion{
+    position:relative;
+    overflow:hidden;
+}
 
-        .buttons {
-            text-align: center;
-            margin-top: 18px;
-        }
+.discussion::before{
+    content:"﷽";
+    position:absolute;
+    top:8px;
+    right:18px;
+    font-size:48px;
+    color:rgba(245,215,124,.06);
+}
 
-        button {
-            border: none;
-            background: #008000;
-            color: white;
-            padding: 9px 14px;
-            margin: 4px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.discussion-label{
+    display:inline-block;
+    background:rgba(229,200,102,.12);
+    color:#f5d77c;
+    padding:6px 14px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:13px;
+}
 
-        button:hover {
-            background: #005500;
-        }
+.discussion h2{
+    font-size:30px;
+    color:#f8d878;
+    margin-bottom:18px;
+}
 
-        .notice {
-            background: #fff8e1;
-            border-left: 4px solid #c28b00;
-            padding: 15px;
-            margin-top: 20px;
-            line-height: 1.8;
-        }
+.discussion p{
+    color:#e1f5eb;
+    margin-bottom:16px;
+}
 
-        footer {
-            background: #005500;
-            color: white;
-            text-align: center;
-            padding: 28px 10px;
-            margin-top: 40px;
-        }
+/* ===== QURAN AYAT ===== */
 
-        footer p {
-            margin: 7px;
-            font-size: 13px;
-        }
+.ayah{
+    margin:24px 0;
+    padding:25px 20px;
+    text-align:center;
+    border-radius:20px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(229,200,102,.08),
+            rgba(35,110,82,.12)
+        );
+    border:1px solid rgba(229,200,102,.20);
+}
 
-        @media (max-width: 700px) {
+.arabic{
+    direction:rtl;
+    font-family:"Amiri","Noto Naskh Arabic",serif;
+    font-size:30px;
+    line-height:2;
+    color:#f7d878;
+    margin-bottom:15px;
+}
 
-            header h1 {
-                font-size: 23px;
-            }
+.translation{
+    color:#e7f7ee;
+    font-size:16px;
+}
 
-            .topics {
-                grid-template-columns: repeat(2, 1fr);
-            }
+.reference{
+    display:block;
+    margin-top:8px;
+    color:#9ed9bd;
+    font-size:14px;
+}
 
-            .arabic {
-                font-size: 23px;
-            }
+/* ===== LESSON ===== */
 
-            nav a {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-        }
+.lesson{
+    background:rgba(53,137,99,.10);
+    border:1px solid rgba(117,215,169,.15);
+    border-radius:18px;
+    padding:20px;
+    margin-top:20px;
+}
 
-        @media (max-width: 450px) {
+.lesson h3{
+    color:#f5d77c;
+    margin-bottom:8px;
+}
 
-            .topics {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+/* ===== ACTION ===== */
+
+.action{
+    text-align:center;
+    margin:35px 0 10px;
+}
+
+.action span{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#d9b84f,#f3da82);
+    color:#132c24;
+    font-weight:bold;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:30px 15px;
+    background:rgba(0,0,0,.25);
+    color:#9bcbb5;
+    font-size:14px;
+}
+
+footer strong{
+    color:#f5d77c;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:650px){
+
+    .hero{
+        min-height:280px;
+    }
+
+    .quran-symbol{
+        font-size:48px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .card{
+        padding:21px;
+        border-radius:20px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:23px;
+    }
+
+    .discussion h2{
+        font-size:25px;
+    }
+
+    .arabic{
+        font-size:25px;
+    }
+
+    .intro,
+    .discussion p{
+        font-size:15px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>📖 পবিত্র কুরআন</h1>
-    <p>কুরআনের আয়াত • বিষয়ভিত্তিক শিক্ষা • দলিলসহ</p>
+<!-- ===== HEADER ===== -->
+
+<header class="hero">
+    <div class="hero-content">
+        <div class="quran-symbol">📖</div>
+        <h1>আল-কুরআন</h1>
+        <p>কোরআনের আলো • হেদায়াতের পথ • জীবনের দিশা</p>
+    </div>
 </header>
 
-<nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="amal.html">📿 আমল</a>
-    <a href="quran.html">📖 কুরআন</a>
-    <a href="hadith.html">📜 হাদিস</a>
-    <a href="dua.html">🤲 দোয়া</a>
-    <a href="stories.html">🌙 গল্প</a>
-    <a href="books.html">📚 বই</a>
-</nav>
 
-<main>
+<main class="container">
 
-<section class="intro">
+    <!-- ===== INTRODUCTION ===== -->
 
-    <h2>কুরআনের আলো</h2>
+    <section class="card">
+        <h2 class="card-title">🌿 কোরআনের আলো</h2>
 
-    <p>
-        আল্লাহর কিতাব থেকে নির্বাচিত আয়াতগুলো
-        বিষয়ভিত্তিকভাবে পড়ুন এবং বুঝুন।
-    </p>
+        <p class="intro">
+            আল-কুরআন আল্লাহ তাআলার পক্ষ থেকে মানবজাতির জন্য
+            নাজিলকৃত মহান হেদায়াতের গ্রন্থ।
+        </p>
 
-    <div class="notice">
-        <strong>📌 গুরুত্বপূর্ণ:</strong><br>
-        এখানে কুরআনের মূল আরবি আয়াতের সঙ্গে
-        সূরা ও আয়াত নম্বর উল্লেখ করা হবে।
-        বাংলা অর্থ অনুবাদ হিসেবে দেওয়া হবে।
-    </div>
+        <p class="intro">
+            এই বিভাগে কোরআনের বিভিন্ন বিষয়, গুরুত্বপূর্ণ তথ্য,
+            আয়াতের শিক্ষা, কোরআনে বর্ণিত ঘটনা, নসিহত এবং
+            মানবজীবনের জন্য প্রয়োজনীয় দিকনির্দেশনা নিয়ে
+            আলোচনা করা হবে।
+        </p>
 
-</section>
+        <p class="intro">
+            কোরআনের আয়াতের আলোকে সহজ ভাষায় বিভিন্ন বিষয়
+            তুলে ধরা হবে, যাতে আমরা কোরআনকে শুধু পড়ার
+            পাশাপাশি বুঝতে পারি এবং আমাদের দৈনন্দিন জীবনে
+            তার শিক্ষা বাস্তবায়ন করতে পারি।
+        </p>
 
+        <div class="highlight">
+            ✨ নতুন নতুন বিষয় ও তথ্য সময়-সুযোগ অনুযায়ী
+            এখানে যুক্ত করা হবে।
+        </div>
+    </section>
 
-<div class="search-box">
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="🔎 সূরা, বিষয় বা আয়াত খুঁজুন..."
-        onkeyup="searchVerses()"
-    >
+    <!-- ===== WHAT WILL BE HERE ===== -->
 
-</div>
+    <h2 class="section-title">📌 এই বিভাগে যা থাকবে</h2>
 
+    <section class="grid">
 
-<h2 class="section-title">📚 বিষয়ভিত্তিক কুরআন</h2>
+        <div class="info-box">
+            <div class="icon">📖</div>
+            <h3>কোরআনের বিভিন্ন বিষয়</h3>
+            <p>কোরআনের আলোকে গুরুত্বপূর্ণ জীবনঘনিষ্ঠ বিষয় নিয়ে আলোচনা।</p>
+        </div>
 
-<section class="topics">
+        <div class="info-box">
+            <div class="icon">🌿</div>
+            <h3>আয়াতের শিক্ষা</h3>
+            <p>বিভিন্ন আয়াত থেকে প্রয়োজনীয় শিক্ষা ও নসিহত।</p>
+        </div>
 
-    <div class="topic" onclick="showTopic('ঈমান')">
-        <h3>🕋 ঈমান</h3>
-        <p>আল্লাহ ও ঈমান সম্পর্কিত আয়াত</p>
-    </div>
+        <div class="info-box">
+            <div class="icon">📚</div>
+            <h3>কোরআনে বর্ণিত ঘটনা</h3>
+            <p>কোরআনে বর্ণিত গুরুত্বপূর্ণ ঘটনা ও তার শিক্ষা।</p>
+        </div>
 
-    <div class="topic" onclick="showTopic('সালাত')">
-        <h3>🕌 সালাত</h3>
-        <p>নামাজ সম্পর্কিত আয়াত</p>
-    </div>
+        <div class="info-box">
+            <div class="icon">💡</div>
+            <h3>গুরুত্বপূর্ণ তথ্য</h3>
+            <p>কোরআন সম্পর্কিত প্রয়োজনীয় ও তথ্যভিত্তিক আলোচনা।</p>
+        </div>
 
-    <div class="topic" onclick="showTopic('সবর')">
-        <h3>🌿 সবর</h3>
-        <p>ধৈর্য ও দৃঢ়তার শিক্ষা</p>
-    </div>
+        <div class="info-box">
+            <div class="icon">🤲</div>
+            <h3>কোরআনিক দোয়া</h3>
+            <p>কোরআনে বর্ণিত গুরুত্বপূর্ণ দোয়া ও তার অর্থ।</p>
+        </div>
 
-    <div class="topic" onclick="showTopic('তাওবা')">
-        <h3>🤲 তাওবা</h3>
-        <p>তাওবা ও আল্লাহর রহমত</p>
-    </div>
+        <div class="info-box">
+            <div class="icon">🕌</div>
+            <h3>জীবনঘনিষ্ঠ দিকনির্দেশনা</h3>
+            <p>কোরআনের আলোকে সুন্দর জীবন গঠনের শিক্ষা।</p>
+        </div>
 
-    <div class="topic" onclick="showTopic('পিতা-মাতা')">
-        <h3>👨‍👩‍👦 পিতা-মাতা</h3>
-        <p>পিতা-মাতার অধিকার</p>
-    </div>
+    </section>
 
-    <div class="topic" onclick="showTopic('আখিরাত')">
-        <h3>🌙 আখিরাত</h3>
-        <p>পরকাল সম্পর্কিত শিক্ষা</p>
-    </div>
 
-</section>
+    <!-- ================================================= -->
+    <!-- নতুন আলোচনা এখানে যোগ করবেন                       -->
+    <!-- ================================================= -->
 
 
-<h2 class="section-title">📖 নির্বাচিত আয়াত</h2>
+    <!-- ===== DISCUSSION 01 ===== -->
 
-<section class="verses" id="verseList">
+    <section class="card discussion">
 
+        <span class="discussion-label">🌿 কোরআনের আলোকে আলোচনা</span>
 
-<!-- আয়াত ১ -->
+        <h2>ধৈর্য ও সবর: মুমিনের গুরুত্বপূর্ণ গুণ</h2>
 
-<article class="verse" data-topic="ঈমান">
+        <p>
+            মানুষের জীবন সবসময় একরকম থাকে না। কখনো আনন্দ আসে,
+            আবার কখনো দুঃখ ও কঠিন পরিস্থিতির মুখোমুখি হতে হয়।
+            কখনো মানুষ সফল হয়, আবার কখনো ব্যর্থতার সম্মুখীন হয়।
+            কখনো নিজের ইচ্ছামতো সবকিছু ঘটে, আবার কখনো এমন
+            পরিস্থিতি আসে যা মেনে নেওয়া কঠিন মনে হয়।
+        </p>
 
-    <h2>আল্লাহর স্মরণ</h2>
+        <p>
+            একজন মুমিনের জন্য এসব পরিস্থিতিতে অত্যন্ত গুরুত্বপূর্ণ
+            একটি গুণ হলো <strong>সবর বা ধৈর্য</strong>।
+        </p>
 
-    <p class="arabic">
-        أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ
-    </p>
+        <p>
+            সবর মানে শুধু কোনো কষ্ট নীরবে সহ্য করা নয়। বরং
+            আল্লাহর ওপর বিশ্বাস রেখে তাঁর আনুগত্যে অটল থাকা,
+            বিপদের সময় হতাশ না হওয়া, পাপ ও অন্যায় থেকে নিজেকে
+            বিরত রাখা এবং ভালো কাজ চালিয়ে যাওয়াই প্রকৃত সবরের অংশ।
+        </p>
 
-    <div class="pronunciation">
 
-        <strong>উচ্চারণ:</strong><br>
+        <!-- AYAH -->
 
-        আলা বিযিকরিল্লাহি তাতমাইন্নুল কুলূব।
+        <div class="ayah">
 
-    </div>
+            <div class="arabic">
+                إِنَّ اللَّهَ مَعَ الصَّابِرِينَ
+            </div>
 
-    <div class="meaning">
+            <div class="translation">
+                “নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সঙ্গে আছেন।”
+            </div>
 
-        <strong>অর্থ:</strong><br>
+            <span class="reference">
+                সূরা আল-বাকারা — ২:১৫৩
+            </span>
 
-        জেনে রাখো, আল্লাহর স্মরণেই অন্তরসমূহ
-        প্রশান্ত হয়।
+        </div>
 
-    </div>
 
-    <div class="reference">
+        <p>
+            এই আয়াত আমাদের জন্য অত্যন্ত বড় একটি আশার বার্তা।
+            মানুষ যখন কঠিন পরিস্থিতির মধ্য দিয়ে যায়, তখন সে যেন
+            মনে রাখে—সে একা নয়। আল্লাহ ধৈর্যশীলদের সঙ্গে আছেন।
+        </p>
 
-        <strong>📚 দলিল:</strong><br>
 
-        সূরা আর-রাদ, ১৩:২৮
+        <div class="ayah">
 
-    </div>
+            <div class="arabic">
+                وَبَشِّرِ الصَّابِرِينَ
+            </div>
 
-    <div class="buttons">
+            <div class="translation">
+                “আর ধৈর্যশীলদের সুসংবাদ দিন।”
+            </div>
 
-        <button onclick="copyText(this)">
-            📋 কপি
-        </button>
+            <span class="reference">
+                সূরা আল-বাকারা — ২:১৫৫
+            </span>
 
-        <button onclick="shareVerse(this)">
-            🔗 শেয়ার
-        </button>
+        </div>
 
-    </div>
 
-</article>
+        <h3 class="card-title">🌱 জীবনে ধৈর্য কেন প্রয়োজন?</h3>
 
+        <p>
+            আমরা অনেক সময় কোনো সমস্যায় পড়লে দ্রুত হতাশ হয়ে যাই।
+            মনে হয়, এই সমস্যা হয়তো আর শেষ হবে না। কিন্তু একজন
+            মুমিন বিশ্বাস করে যে আল্লাহ সবকিছু জানেন এবং তাঁর
+            সিদ্ধান্তের মধ্যে হিকমত রয়েছে।
+        </p>
 
-<!-- আয়াত ২ -->
+        <p>
+            পরীক্ষায় ভালো ফল না হলে, কোনো কাজ সফল না হলে,
+            কোনো প্রিয় জিনিস হারালে কিংবা জীবনে কোনো কঠিন
+            পরিস্থিতি এলে একজন মুসলিম ধৈর্য ধারণ করবে। সে
+            আল্লাহর কাছে সাহায্য চাইবে এবং নিজের দায়িত্ব পালন
+            করে যাবে।
+        </p>
 
-<article class="verse" data-topic="সবর">
+        <p>
+            ধৈর্য মানে বসে থাকা নয়। <strong>ধৈর্যের সঙ্গে
+            চেষ্টা করাও জরুরি।</strong> একজন শিক্ষার্থী পড়াশোনায়
+            কষ্ট পেলেও চেষ্টা চালিয়ে যাবে। কোনো ভালো কাজ করতে
+            গিয়ে বাধা পেলেও তা ছেড়ে দেবে না।
+        </p>
 
-    <h2>সবর ও সালাতের মাধ্যমে সাহায্য</h2>
 
-    <p class="arabic">
-        يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا
-        بِالصَّبْرِ وَالصَّلَاةِ
-        إِنَّ اللَّهَ مَعَ الصَّابِرِينَ
-    </p>
+        <div class="lesson">
 
-    <div class="pronunciation">
+            <h3>🕌 বিপদের সময় কী করা উচিত?</h3>
 
-        <strong>উচ্চারণ:</strong><br>
+            <p>
+                • আল্লাহর ওপর ভরসা করা।<br>
+                • নামাজের মাধ্যমে আল্লাহর সাহায্য চাওয়া।<br>
+                • দোয়া করা।<br>
+                • হতাশ না হওয়া।<br>
+                • অন্যায় ও পাপের পথে না যাওয়া।<br>
+                • নিজের সাধ্য অনুযায়ী চেষ্টা চালিয়ে যাওয়া।<br>
+                • মনে রাখা যে আল্লাহ সবকিছু দেখছেন ও জানেন।
+            </p>
 
-        ইয়া আইয়ুহাল্লাযীনা আমানুস্তাঈনূ
-        বিসসবরি ওয়াসসালাহ। ইন্নাল্লাহা
-        মাআস সাবিরীন।
+        </div>
 
-    </div>
 
-    <div class="meaning">
+        <h3 class="card-title">💡 আমাদের জন্য শিক্ষা</h3>
 
-        <strong>অর্থ:</strong><br>
+        <p>
+            জীবনে যত কঠিন পরিস্থিতিই আসুক, আমাদের আল্লাহর
+            রহমত থেকে নিরাশ হওয়া উচিত নয়। আজ যে সমস্যা খুব
+            বড় মনে হচ্ছে, ভবিষ্যতে সেটিই হয়তো আমাদের জন্য
+            কোনো শিক্ষা বা কল্যাণের কারণ হয়ে দাঁড়াবে।
+        </p>
 
-        হে মুমিনগণ! তোমরা ধৈর্য ও সালাতের
-        মাধ্যমে সাহায্য প্রার্থনা করো।
-        নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সঙ্গে আছেন।
+        <p>
+            তাই সুখের সময় <strong>আলহামদুলিল্লাহ</strong> বলা
+            এবং কষ্টের সময় <strong>সবর ও আল্লাহর ওপর ভরসা</strong>
+            করা—একজন মুমিনের সুন্দর গুণ।
+        </p>
 
-    </div>
+        <div class="highlight">
 
-    <div class="reference">
+            🌿 কষ্টের সময় ধৈর্য ধরুন।<br>
+            🤲 আল্লাহর কাছে সাহায্য চান।<br>
+            🕌 নামাজ ও ইবাদত ধরে রাখুন।<br>
+            💚 ভালো কাজ চালিয়ে যান।<br>
+            🌸 আল্লাহর রহমত থেকে নিরাশ হবেন না।
 
-        <strong>📚 দলিল:</strong><br>
+        </div>
 
-        সূরা আল-বাকারা, ২:১৫৩
+        <p style="margin-top:20px;text-align:center;">
+            <strong>
+                আল্লাহ আমাদের সবাইকে বিপদে ধৈর্য ধারণ করার
+                এবং সুখে তাঁর শুকরিয়া আদায় করার তাওফিক দান করুন।
+                আমিন।
+            </strong>
+        </p>
 
-    </div>
+    </section>
 
-    <div class="buttons">
 
-        <button onclick="copyText(this)">
-            📋 কপি
-        </button>
+    <!-- ===== FUTURE DISCUSSIONS ===== -->
 
-        <button onclick="shareVerse(this)">
-            🔗 শেয়ার
-        </button>
+    <section class="card">
 
-    </div>
+        <h2 class="card-title">✨ আরও আলোচনা আসছে</h2>
 
-</article>
+        <p class="intro">
+            সময় ও সুযোগ অনুযায়ী কোরআনের আলোকে আরও বিভিন্ন
+            বিষয়, শিক্ষা, ঘটনা ও গুরুত্বপূর্ণ তথ্য এখানে যুক্ত
+            করা হবে।
+        </p>
 
+        <div class="action">
+            <span>📖 কোরআনের আলো ছড়িয়ে দিন</span>
+        </div>
 
-<!-- আয়াত ৩ -->
-
-<article class="verse" data-topic="পিতা-মাতা">
-
-    <h2>পিতা-মাতার প্রতি সদাচরণ</h2>
-
-    <p class="arabic">
-        وَبِالْوَالِدَيْنِ إِحْسَانًا
-    </p>
-
-    <div class="pronunciation">
-
-        <strong>উচ্চারণ:</strong><br>
-
-        ওয়া বিল-ওয়ালিদাইনি ইহসানা।
-
-    </div>
-
-    <div class="meaning">
-
-        <strong>অর্থ:</strong><br>
-
-        এবং পিতা-মাতার সঙ্গে সদাচরণ করো।
-
-    </div>
-
-    <div class="reference">
-
-        <strong>📚 দলিল:</strong><br>
-
-        সূরা আল-বাকারা, ২:৮৩
-
-    </div>
-
-    <div class="buttons">
-
-        <button onclick="copyText(this)">
-            📋 কপি
-        </button>
-
-        <button onclick="shareVerse(this)">
-            🔗 শেয়ার
-        </button>
-
-    </div>
-
-</article>
-
-
-<!-- আয়াত ৪ -->
-
-<article class="verse" data-topic="আখিরাত">
-
-    <h2>আল্লাহর রহমত থেকে নিরাশ না হওয়া</h2>
-
-    <p class="arabic">
-        لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ
-    </p>
-
-    <div class="pronunciation">
-
-        <strong>উচ্চারণ:</strong><br>
-
-        লা তাকনাতু মির রাহমাতিল্লাহ।
-
-    </div>
-
-    <div class="meaning">
-
-        <strong>অর্থ:</strong><br>
-
-        তোমরা আল্লাহর রহমত থেকে নিরাশ হয়ো না।
-
-    </div>
-
-    <div class="reference">
-
-        <strong>📚 দলিল:</strong><br>
-
-        সূরা আয-যুমার, ৩৯:৫৩
-
-    </div>
-
-    <div class="buttons">
-
-        <button onclick="copyText(this)">
-            📋 কপি
-        </button>
-
-        <button onclick="shareVerse(this)">
-            🔗 শেয়ার
-        </button>
-
-    </div>
-
-</article>
-
-</section>
+    </section>
 
 </main>
 
 
 <footer>
-
-    <p>© 2026 Abdullah Musafir Media</p>
-
-    <p>
-        কুরআন ও সহিহ সুন্নাহর আলোকে উপকারী জ্ঞান
-    </p>
-
+    <p>📖 <strong>আল-কুরআন</strong></p>
+    <p>কোরআনের আলোয় জীবন গড়ি</p>
 </footer>
 
-
-<script>
-
-function searchVerses() {
-
-    let input =
-        document.getElementById("searchInput")
-        .value
-        .toLowerCase();
-
-    let verses =
-        document.querySelectorAll(".verse");
-
-    verses.forEach(function(verse) {
-
-        let text =
-            verse.innerText.toLowerCase();
-
-        if (text.includes(input)) {
-
-            verse.style.display = "block";
-
-        } else {
-
-            verse.style.display = "none";
-
-        }
-
-    });
-
-}
-
-
-function showTopic(topic) {
-
-    let verses =
-        document.querySelectorAll(".verse");
-
-    verses.forEach(function(verse) {
-
-        let verseTopic =
-            verse.getAttribute("data-topic");
-
-        if (verseTopic === topic) {
-
-            verse.style.display = "block";
-
-            verse.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
-    });
-
-}
-
-
-function copyText(button) {
-
-    let verse =
-        button.closest(".verse");
-
-    let text =
-        verse.innerText;
-
-    navigator.clipboard.writeText(text);
-
-    alert("আয়াতের তথ্য কপি হয়েছে।");
-
-}
-
-
-function shareVerse(button) {
-
-    let verse =
-        button.closest(".verse");
-
-    let text =
-        verse.innerText;
-
-    if (navigator.share) {
-
-        navigator.share({
-            title: "কুরআনের আয়াত",
-            text: text
-        });
-
-    } else {
-
-        navigator.clipboard.writeText(text);
-
-        alert("শেয়ার করার জন্য তথ্য কপি হয়েছে।");
-
-    }
-
-}
-
-</script>
-
 </body>
-  </html>
+</html>
