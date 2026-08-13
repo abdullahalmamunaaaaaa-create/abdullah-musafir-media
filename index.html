@@ -7,74 +7,145 @@
     <title>Abdullah Musafir Media</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f1f7f1;
+            background: #f3f8f4;
             color: #333;
         }
 
         /* Header */
         header {
-            background: darkgreen;
+            background: linear-gradient(135deg, #006400, #008000);
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 38px 15px;
         }
 
         header h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 30px;
         }
 
         header p {
-            margin: 8px 0 0;
-            font-size: 14px;
+            margin: 10px 0 0;
+            font-size: 15px;
         }
 
-        /* Menu */
+        /* Navigation */
         nav {
             background: white;
             text-align: center;
-            padding: 12px;
-            box-shadow: 0 2px 6px #ccc;
+            padding: 12px 8px;
+            box-shadow: 0 2px 8px #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             display: inline-block;
-            background: green;
+            background: #008000;
             color: white;
             text-decoration: none;
-            padding: 9px 14px;
+            padding: 9px 13px;
             margin: 4px;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 13px;
         }
 
         nav a:hover {
-            background: darkgreen;
+            background: #005500;
         }
 
         /* Main */
         main {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 30px 15px;
         }
 
+        /* Welcome */
         .welcome {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 14px;
             text-align: center;
-            margin-bottom: 30px;
+            box-shadow: 0 3px 12px #ddd;
+            margin-bottom: 25px;
         }
 
         .welcome h2 {
-            color: darkgreen;
-            font-size: 25px;
+            color: #006400;
+            margin-top: 0;
+            font-size: 27px;
         }
 
         .welcome p {
-            line-height: 1.8;
+            line-height: 1.9;
             font-size: 15px;
+        }
+
+        /* Search */
+        .search-box {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px #ddd;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .search-box h2 {
+            color: #006400;
+            margin-top: 0;
+        }
+
+        .search-box input {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #008000;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-box button:hover {
+            background: #005500;
+        }
+
+        /* YouTube */
+        .youtube {
+            text-align: center;
+            margin: 25px 0 35px;
+        }
+
+        .youtube a {
+            display: inline-block;
+            background: #006400;
+            color: white;
+            padding: 13px 24px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        /* Section title */
+        .section-title {
+            text-align: center;
+            color: #006400;
+            margin: 35px 0 20px;
         }
 
         /* Cards */
@@ -87,59 +158,64 @@
         .card {
             background: white;
             padding: 25px 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 2px 10px #ddd;
-            min-height: 150px;
+            box-shadow: 0 3px 12px #ddd;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
         }
 
         .card h3 {
-            color: darkgreen;
+            color: #006400;
             margin-top: 0;
             font-size: 19px;
         }
 
         .card p {
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 14px;
         }
 
         .card a {
             display: inline-block;
             margin-top: 8px;
-            background: green;
+            background: #008000;
             color: white;
-            padding: 8px 15px;
+            padding: 9px 16px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-size: 13px;
         }
 
         .card a:hover {
-            background: darkgreen;
+            background: #005500;
         }
 
-        /* YouTube Button */
-        .youtube {
-            text-align: center;
+        /* Highlight */
+        .highlight {
+            background: #e8f5e9;
+            border-left: 5px solid #008000;
+            padding: 22px;
+            border-radius: 8px;
             margin: 30px 0;
+            line-height: 1.9;
         }
 
-        .youtube a {
-            background: darkgreen;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 6px;
-            text-decoration: none;
+        .highlight h2 {
+            color: #006400;
+            margin-top: 0;
         }
 
         /* Footer */
         footer {
-            background: darkgreen;
+            background: #005500;
             color: white;
             text-align: center;
-            padding: 25px 10px;
-            margin-top: 30px;
+            padding: 30px 10px;
+            margin-top: 40px;
         }
 
         footer p {
@@ -149,16 +225,27 @@
 
         /* Mobile */
         @media (max-width: 600px) {
-            .cards {
-                grid-template-columns: 1fr;
-            }
 
             header h1 {
                 font-size: 23px;
             }
 
             nav a {
-                padding: 8px 11px;
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .search-box button {
+                width: 100%;
             }
         }
     </style>
@@ -168,104 +255,198 @@
 
 <header>
     <h1>Abdullah Musafir Media</h1>
-    <p>ইসলামিক জ্ঞান • প্রযুক্তি • শিক্ষা</p>
+    <p>ইসলামিক জ্ঞান • শিক্ষা • উপকারী কনটেন্ট</p>
 </header>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="articles.html">Articles</a>
-    <a href="youtube.html">YouTube</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👤 About</a>
+    <a href="articles.html">📝 Articles</a>
+    <a href="amal.html">📿 আমল</a>
+    <a href="quran.html">📖 কুরআন</a>
+    <a href="hadith.html">📜 হাদিস</a>
+    <a href="contact.html">📞 Contact</a>
 </nav>
 
 <main>
 
     <section class="welcome">
-        <h2>আসসালামু আলাইকুম</h2>
+        <h2>আসসালামু আলাইকুম 🌿</h2>
 
         <p>
             Abdullah Musafir Media-তে আপনাকে স্বাগতম।
-            ইসলামিক জ্ঞান, শিক্ষা, প্রযুক্তি এবং বিভিন্ন
-            শিক্ষামূলক বিষয় নিয়ে আমাদের এই ছোট্ট প্রচেষ্টা।
+            ইসলামিক জ্ঞান, কুরআন, হাদিস, আমল, দোয়া,
+            শিক্ষা ও উপকারী বিষয় সহজভাবে মানুষের কাছে
+            পৌঁছে দেওয়াই আমাদের উদ্দেশ্য।
         </p>
     </section>
 
+    <!-- Search -->
+    <section class="search-box">
+
+        <h2>🔎 প্রয়োজনীয় বিষয় খুঁজুন</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="যেমন: ঘুমের দোয়া, নামাজ, হাদিস..."
+        >
+
+        <button onclick="searchSite()">খুঁজুন</button>
+
+        <p id="searchResult"></p>
+
+    </section>
+
+    <!-- YouTube -->
     <div class="youtube">
-        <a href="youtube.html">🎥 আমাদের YouTube চ্যানেল দেখুন</a>
+        <a href="youtube.html">
+            🎥 আমাদের YouTube চ্যানেল দেখুন
+        </a>
     </div>
+
+    <h2 class="section-title">📚 আমাদের প্রধান বিভাগ</h2>
 
     <section class="cards">
 
         <div class="card">
-            <h3>📖 ইসলামী জ্ঞান</h3>
+            <h3>📿 দৈনন্দিন আমল</h3>
             <p>
-                কুরআন, হাদিস, আকিদা, ইসলামের ইতিহাস
-                এবং বিভিন্ন গুরুত্বপূর্ণ ইসলামিক বিষয়।
+                সকাল-সন্ধ্যা, নামাজ, ঘুম, খাবার,
+                সফরসহ প্রতিদিনের প্রয়োজনীয় আমল।
             </p>
-            <a href="articles.html">আরও দেখুন</a>
+            <a href="amal.html">আমল দেখুন</a>
         </div>
 
         <div class="card">
-            <h3>🎓 শিক্ষা</h3>
+            <h3>📖 কুরআন</h3>
             <p>
-                ইংরেজি, আরবি এবং বিভিন্ন শিক্ষামূলক
-                বিষয় নিয়ে সহজভাবে শেখার সুযোগ।
+                কুরআনের আয়াত, বাংলা অর্থ,
+                বিষয়ভিত্তিক আয়াত ও শিক্ষা।
             </p>
+            <a href="quran.html">কুরআন দেখুন</a>
         </div>
 
         <div class="card">
-            <h3>💻 প্রযুক্তি</h3>
+            <h3>📜 হাদিস</h3>
             <p>
-                কম্পিউটার, ওয়েবসাইট, HTML, CSS,
-                GitHub এবং আধুনিক প্রযুক্তি সম্পর্কে শেখা।
+                বিভিন্ন বিষয়ের নির্বাচিত হাদিস
+                ও হাদিসের সূত্র।
             </p>
+            <a href="hadith.html">হাদিস দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>🤲 দোয়া</h3>
+            <p>
+                দৈনন্দিন জীবনের প্রয়োজনীয় দোয়া,
+                আরবি, উচ্চারণ ও বাংলা অর্থ।
+            </p>
+            <a href="dua.html">দোয়া দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>🌙 ইসলামিক গল্প</h3>
+            <p>
+                শিক্ষামূলক ও নসিহতপূর্ণ
+                ইসলামিক গল্প পড়ুন।
+            </p>
+            <a href="stories.html">গল্প পড়ুন</a>
+        </div>
+
+        <div class="card">
+            <h3>📚 ইসলামিক বই</h3>
+            <p>
+                ইসলামিক বই ও PDF পড়ার
+                এবং ডাউনলোড করার ব্যবস্থা।
+            </p>
+            <a href="books.html">বই দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 প্রবন্ধ ও লেখা</h3>
+            <p>
+                ইসলামিক প্রবন্ধ, শিক্ষামূলক লেখা
+                এবং বিভিন্ন উপকারী বিষয়।
+            </p>
+            <a href="articles.html">লেখা পড়ুন</a>
         </div>
 
         <div class="card">
             <h3>🕌 দ্বীনি শিক্ষা</h3>
             <p>
-                ইসলামের গুরুত্বপূর্ণ বিষয়, আমল,
-                দোয়া এবং সুন্দর ইসলামী শিক্ষা।
+                ইসলামের গুরুত্বপূর্ণ বিষয়গুলো
+                সহজভাবে জানুন ও শিখুন।
             </p>
+            <a href="articles.html">শিখুন</a>
         </div>
 
         <div class="card">
-            <h3>👤 আমাদের পরিচয়</h3>
+            <h3>🎓 শিক্ষা</h3>
             <p>
-                Abdullah Musafir Media একটি শিক্ষামূলক
-                প্ল্যাটফর্ম। ইসলামিক জ্ঞান, শিক্ষা ও
-                প্রযুক্তি সহজভাবে মানুষের কাছে পৌঁছে দেওয়াই
-                আমাদের উদ্দেশ্য।
+                ইংরেজি, আরবি ও অন্যান্য
+                শিক্ষামূলক বিষয়।
             </p>
-            <a href="about.html">পরিচয় দেখুন</a>
-        </div>
-
-        <div class="card">
-            <h3>✍️ গল্প ও লেখা</h3>
-            <p>
-                শিক্ষামূলক গল্প, ইসলামিক লেখা,
-                প্রবন্ধ ও বিভিন্ন সুন্দর বিষয় পড়ুন।
-            </p>
-            <a href="articles.html">লেখাগুলো দেখুন</a>
         </div>
 
         <div class="card">
             <h3>🌍 সাধারণ জ্ঞান</h3>
             <p>
-                দেশ-বিদেশ, ইতিহাস, বিজ্ঞান ও
-                দৈনন্দিন জীবনের বিভিন্ন সাধারণ জ্ঞান।
+                ইতিহাস, দেশ-বিদেশ এবং
+                বিভিন্ন সাধারণ জ্ঞান।
             </p>
         </div>
 
         <div class="card">
             <h3>🎥 ভিডিও</h3>
             <p>
-                ইসলামিক আলোচনা, শিক্ষা, প্রযুক্তি
-                এবং বিভিন্ন বিষয়ের ভিডিও দেখতে আমাদের
-                YouTube চ্যানেল ভিজিট করুন।
+                ইসলামিক আলোচনা, শিক্ষা ও
+                বিভিন্ন উপকারী ভিডিও।
             </p>
             <a href="youtube.html">ভিডিও দেখুন</a>
+        </div>
+
+        <div class="card">
+            <h3>👤 আমাদের পরিচয়</h3>
+            <p>
+                Abdullah Musafir Media-এর
+                উদ্দেশ্য ও পরিচিতি।
+            </p>
+            <a href="about.html">পরিচয় দেখুন</a>
+        </div>
+
+    </section>
+
+    <!-- Today's Advice -->
+    <section class="highlight">
+
+        <h2>🌿 আজকের নসিহত</h2>
+
+        <p>
+            প্রতিদিন সামান্য হলেও ভালো কাজ করার চেষ্টা করুন।
+            নিয়মিত ছোট ছোট নেক আমলও জীবনে বড় পরিবর্তন
+            আনতে পারে।
+        </p>
+
+    </section>
+
+    <!-- Latest -->
+    <section class="cards">
+
+        <div class="card">
+            <h3>🆕 সর্বশেষ প্রকাশনা</h3>
+            <p>
+                নতুন আমল, হাদিস, প্রবন্ধ ও
+                ইসলামিক গল্প এখানে যোগ করা হবে।
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>⭐ জনপ্রিয় লেখা</h3>
+            <p>
+                দর্শকদের পছন্দের ও বেশি পড়া
+                লেখাগুলো এখানে দেখানো যাবে।
+            </p>
         </div>
 
     </section>
@@ -273,9 +454,90 @@
 </main>
 
 <footer>
+
     <p>© 2026 Abdullah Musafir Media</p>
-    <p>জ্ঞান অর্জন করুন • অন্যকে উপকৃত করুন</p>
+
+    <p>
+        জ্ঞান অর্জন করুন • অন্যকে উপকৃত করুন
+    </p>
+
+    <p>
+        Home | About | Articles | Contact
+    </p>
+
 </footer>
 
+
+<script>
+
+function searchSite() {
+
+    let search = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    let result = document
+        .getElementById("searchResult");
+
+    if (search === "") {
+
+        result.innerHTML =
+            "অনুগ্রহ করে কোনো বিষয় লিখুন।";
+
+        return;
+    }
+
+    if (
+        search.includes("আমল") ||
+        search.includes("দোয়া")
+    ) {
+
+        window.location.href = "amal.html";
+
+    } else if (
+        search.includes("কুরআন") ||
+        search.includes("আয়াত")
+    ) {
+
+        window.location.href = "quran.html";
+
+    } else if (
+        search.includes("হাদিস")
+    ) {
+
+        window.location.href = "hadith.html";
+
+    } else if (
+        search.includes("গল্প")
+    ) {
+
+        window.location.href = "stories.html";
+
+    } else if (
+        search.includes("বই") ||
+        search.includes("pdf")
+    ) {
+
+        window.location.href = "books.html";
+
+    } else if (
+        search.includes("প্রবন্ধ") ||
+        search.includes("লেখা")
+    ) {
+
+        window.location.href = "articles.html";
+
+    } else {
+
+        result.innerHTML =
+            "দুঃখিত, এই বিষয়টি এখনো যোগ করা হয়নি।";
+
+    }
+}
+
+</script>
+
 </body>
-</html>
+                                               </html>
