@@ -1,323 +1,514 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>দৈনন্দিন আমল | Abdullah Musafir Media</title>
+<title>আমল | ইসলামিক জীবন</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f3f8f4;
-            color: #333;
-        }
+body{
+    font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
+    background:linear-gradient(135deg,#021510,#063d30,#01100d);
+    color:#fff;
+    line-height:1.9;
+}
 
-        header {
-            background: linear-gradient(135deg, #006400, #008000);
-            color: white;
-            text-align: center;
-            padding: 35px 15px;
-        }
+header{
+    text-align:center;
+    padding:55px 18px;
+    background:
+    radial-gradient(circle at top,#287d60,#07372c 55%,#020e0b);
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+header .icon{
+    font-size:65px;
+}
 
-        header p {
-            margin: 10px 0 0;
-        }
+header h1{
+    color:#f5d77b;
+    font-size:42px;
+    margin:8px 0;
+}
 
-        nav {
-            background: white;
-            text-align: center;
-            padding: 12px 8px;
-            box-shadow: 0 2px 8px #ddd;
-        }
+header p{
+    color:#c8e9dc;
+}
 
-        nav a {
-            display: inline-block;
-            background: #008000;
-            color: white;
-            text-decoration: none;
-            padding: 9px 13px;
-            margin: 4px;
-            border-radius: 6px;
-            font-size: 13px;
-        }
+.container{
+    width:92%;
+    max-width:1050px;
+    margin:auto;
+    padding:35px 0 70px;
+}
 
-        nav a:hover {
-            background: #005500;
-        }
+/* Intro */
 
-        main {
-            max-width: 950px;
-            margin: auto;
-            padding: 30px 15px;
-        }
+.intro{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(245,215,123,.28);
+    border-radius:28px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow:0 15px 45px rgba(0,0,0,.3);
+}
 
-        .intro {
-            background: white;
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 14px;
-            box-shadow: 0 3px 12px #ddd;
-            margin-bottom: 25px;
-        }
+.bismillah{
+    text-align:center;
+    font-family:"Amiri","Noto Naskh Arabic",serif;
+    font-size:30px;
+    color:#f5d77b;
+    margin-bottom:20px;
+}
 
-        .intro h2 {
-            color: #006400;
-        }
+.intro h2{
+    text-align:center;
+    color:#f5d77b;
+    font-size:29px;
+    margin-bottom:18px;
+}
 
-        .intro p {
-            line-height: 1.9;
-        }
+.intro p{
+    color:#e1f3ec;
+    margin-bottom:14px;
+}
 
-        .section-title {
-            text-align: center;
-            color: #006400;
-            margin: 30px 0 20px;
-        }
+.quote{
+    margin-top:20px;
+    padding:18px;
+    border-left:4px solid #f5d77b;
+    background:rgba(245,215,123,.06);
+    color:#f4e7b5;
+    border-radius:12px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+/* Section */
 
-        .card {
-            background: white;
-            padding: 25px 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #ddd;
-        }
+.section-title{
+    text-align:center;
+    color:#f5d77b;
+    font-size:30px;
+    margin:40px 0 25px;
+}
 
-        .card h2 {
-            color: #006400;
-            font-size: 20px;
-            text-align: center;
-        }
+/* Surah cards */
 
-        .card p {
-            line-height: 1.9;
-            font-size: 15px;
-        }
+.amal-card{
+    border-radius:28px;
+    padding:28px;
+    margin:25px 0;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
 
-        .arabic {
-            direction: rtl;
-            text-align: center;
-            font-size: 25px !important;
-            line-height: 2 !important;
-            color: #222;
-        }
+.waqiah{
+    background:linear-gradient(135deg,#4a3218,#1d1409);
+}
 
-        .reference {
-            background: #e8f5e9;
-            padding: 12px;
-            border-left: 4px solid #008000;
-            margin-top: 15px;
-            line-height: 1.7;
-            font-size: 14px;
-        }
+.mulk{
+    background:linear-gradient(135deg,#173e5a,#091d2a);
+}
 
-        .badge {
-            display: inline-block;
-            background: #006400;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-        }
+.kahf{
+    background:linear-gradient(135deg,#194d3c,#08251d);
+}
 
-        footer {
-            background: #005500;
-            color: white;
-            text-align: center;
-            padding: 25px 10px;
-            margin-top: 35px;
-        }
+.badge{
+    display:inline-block;
+    background:rgba(255,255,255,.12);
+    padding:5px 14px;
+    border-radius:30px;
+    font-size:14px;
+    margin-bottom:10px;
+}
 
-        footer p {
-            margin: 7px;
-            font-size: 13px;
-        }
+.amal-card h2{
+    color:#ffe69a;
+    font-size:29px;
+    margin-bottom:15px;
+}
 
-        @media (max-width: 600px) {
+.arabic{
+    direction:rtl;
+    text-align:center;
+    font-family:"Amiri","Noto Naskh Arabic",serif;
+    font-size:27px;
+    color:#ffe69a;
+    padding:16px;
+    border-top:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    margin:18px 0;
+}
 
-            header h1 {
-                font-size: 23px;
-            }
+.info{
+    background:rgba(0,0,0,.16);
+    border-radius:18px;
+    padding:20px;
+    margin-top:15px;
+}
 
-            .cards {
-                grid-template-columns: 1fr;
-            }
+.info p{
+    margin:7px 0;
+}
 
-            nav a {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-        }
-    </style>
+.label{
+    color:#f5d77b;
+    font-weight:bold;
+}
+
+.warning{
+    margin-top:18px;
+    padding:17px;
+    border-radius:15px;
+    background:rgba(255,255,255,.07);
+    color:#f6e7b5;
+}
+
+/* New section */
+
+.add{
+    margin-top:45px;
+    padding:30px;
+    text-align:center;
+    border:2px dashed rgba(245,215,123,.35);
+    border-radius:25px;
+    background:rgba(245,215,123,.04);
+}
+
+.add h2{
+    color:#f5d77b;
+    margin-bottom:10px;
+}
+
+/* Home */
+
+.home{
+    text-align:center;
+    margin:45px 0 10px;
+}
+
+.home a{
+    display:inline-block;
+    text-decoration:none;
+    color:#17251f;
+    background:linear-gradient(135deg,#d5b451,#f6df8a);
+    padding:14px 32px;
+    border-radius:50px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,.25);
+    color:#a9cfbf;
+}
+
+footer strong{
+    color:#f5d77b;
+}
+
+@media(max-width:650px){
+
+    header h1{
+        font-size:34px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .intro,
+    .amal-card{
+        padding:21px;
+    }
+
+    .amal-card h2{
+        font-size:25px;
+    }
+
+    .arabic{
+        font-size:24px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>📿 দৈনন্দিন আমল</h1>
-    <p>কুরআন ও সহিহ সুন্নাহর আলোকে</p>
+    <div class="icon">📿</div>
+    <h1>আমল ও নেক কাজ</h1>
+    <p>ছোট ছোট আমল • সুন্দর জীবন • আখিরাতের প্রস্তুতি</p>
 </header>
 
-<nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="amal.html">📿 আমল</a>
-    <a href="quran.html">📖 কুরআন</a>
-    <a href="hadith.html">📜 হাদিস</a>
-    <a href="dua.html">🤲 দোয়া</a>
-    <a href="stories.html">🌙 গল্প</a>
-    <a href="books.html">📚 বই</a>
-</nav>
+<main class="container">
 
-<main>
+<!-- ================= ভূমিকা ================= -->
 
-    <section class="intro">
+<section class="intro">
 
-        <h2>প্রতিদিনের প্রয়োজনীয় আমল</h2>
+<div class="bismillah">
+بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+</div>
 
-        <p>
-            এই পেজে কুরআন ও নির্ভরযোগ্য সুন্নাহর
-            দলিলভিত্তিক আমল ধীরে ধীরে সাজানো হবে।
-        </p>
+<h2>🌿 ছোট ছোট আমল, বড় বড় নেকি</h2>
 
-        <span class="badge">
-            দলিল ছাড়া আমল প্রকাশ করা হবে না
-        </span>
+<p>
+<strong>আমল হলো মুমিনের জীবনের সৌন্দর্য।</strong>
+প্রতিদিনের ব্যস্ততার মাঝেও ছোট ছোট নেক আমলের মাধ্যমে
+আল্লাহর নৈকট্য অর্জনের চেষ্টা করা যায়।
+</p>
 
-    </section>
+<p>
+একটি ভালো কথা, একটি যিকির, একটি সদকা, বাবা-মায়ের প্রতি
+সদাচরণ—এসব ছোট মনে হলেও আল্লাহর কাছে মূল্যবান হতে পারে।
+</p>
 
+<p>
+<strong>আমলবিহীন জীবন যেন ফলশূন্য গাছের মতো।</strong>
+জীবনের প্রতিটি দিনকে তাই কিছু না কিছু ভালো আমল দিয়ে
+সাজানো উচিত।
+</p>
 
-    <h2 class="section-title">🌅 সকাল ও সন্ধ্যার আমল</h2>
+<p>
+এই বিভাগে বিভিন্ন সহজ ও বাস্তবসম্মত আমল, কখন করা যায়,
+কীভাবে করা যায়, ফজিলত এবং নির্ভরযোগ্য কোরআন-হাদিসের
+সূত্র তুলে ধরা হবে।
+</p>
 
-    <section class="cards">
+<div class="quote">
+🌙 <strong>আজকের ছোট আমলই হতে পারে আখিরাতের বড় সঞ্চয়।</strong>
+<br>
+🤲 আল্লাহ আমাদের আমল করার এবং আমল কবুল হওয়ার তাওফিক দান করুন। আমিন।
+</div>
 
-        <div class="card">
-
-            <h2>🌿 সুবহানাল্লাহি ওয়া বিহামদিহি</h2>
-
-            <p class="arabic">
-                سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
-            </p>
-
-            <p>
-                সকাল ও সন্ধ্যায় এই যিকির
-                ১০০ বার পড়ার কথা হাদিসে এসেছে।
-            </p>
-
-            <p>
-                <strong>উচ্চারণ:</strong><br>
-                সুবহানাল্লাহি ওয়া বিহামদিহি।
-            </p>
-
-            <div class="reference">
-
-                <strong>📚 দলিল:</strong><br>
-
-                সহিহ মুসলিম, হাদিস ২৬৯২।
-                আবু হুরাইরা (রা.) থেকে বর্ণিত,
-                রাসুলুল্লাহ ﷺ সকাল ও সন্ধ্যায়
-                এটি ১০০ বার পড়ার ফজিলত উল্লেখ করেছেন।
-                1
-
-            </div>
-
-        </div>
+</section>
 
 
-        <div class="card">
-
-            <h2>📖 কুরআনের নির্দেশ</h2>
-
-            <p>
-                আল্লাহ মুমিনদের অধিক পরিমাণে
-                তাঁর যিকির করতে নির্দেশ দিয়েছেন।
-            </p>
-
-            <p class="arabic">
-                وَاذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا
-            </p>
-
-            <div class="reference">
-
-                <strong>📚 দলিল:</strong><br>
-
-                সূরা আল-আহযাব, ৩৩:৪১।
-                2
-
-            </div>
-
-        </div>
-
-    </section>
+<h2 class="section-title">📖 সূরাভিত্তিক আমল</h2>
 
 
-    <h2 class="section-title">🕌 অন্যান্য বিভাগ</h2>
+<!-- ================= ওয়াকিয়া ================= -->
 
-    <section class="cards">
+<section class="amal-card waqiah">
 
-        <div class="card">
-            <h2>🕌 নামাজের আমল</h2>
+<span class="badge">📿 আমল ০১</span>
 
-            <p>
-                নামাজ সম্পর্কিত সহিহ আমলগুলো
-                দলিলসহ এখানে যোগ করা হবে।
-            </p>
-        </div>
+<h2>🌙 সূরা আল-ওয়াকিয়া</h2>
 
-        <div class="card">
-            <h2>😴 ঘুমের আমল</h2>
+<div class="info">
 
-            <p>
-                ঘুমানোর আগে ও ঘুম থেকে ওঠার
-                সহিহ আমলগুলো এখানে যোগ করা হবে।
-            </p>
-        </div>
+<p><span class="label">📖 সূরা নম্বর:</span> ৫৬</p>
+<p><span class="label">📚 পারা:</span> ২৭</p>
+<p><span class="label">🔢 আয়াত:</span> ৯৬</p>
 
-        <div class="card">
-            <h2>🍽️ খাবারের আমল</h2>
+<p>
+<span class="label">⏰ কখন পড়বেন:</span>
+কোরআন তিলাওয়াতের সময় সুবিধামতো পড়তে পারেন।
+সূরাটির জন্য একটি নির্দিষ্ট সময়কে বাধ্যতামূলক বলা হবে না,
+যদি নির্ভরযোগ্য দলিল না থাকে।
+</p>
 
-            <p>
-                খাবারের আগে ও পরে প্রমাণিত
-                সুন্নাহর আমলগুলো এখানে থাকবে।
-            </p>
-        </div>
+<p>
+<span class="label">📿 কীভাবে আমল করবেন:</span>
+সম্মানের সঙ্গে সূরাটি তিলাওয়াত করুন এবং সম্ভব হলে
+বাংলা অর্থ পড়ে আয়াতগুলোর শিক্ষা বোঝার চেষ্টা করুন।
+</p>
 
-        <div class="card">
-            <h2>🚶 সফরের আমল</h2>
+</div>
 
-            <p>
-                সফরের সময়ের প্রমাণিত
-                দোয়া ও আমলগুলো এখানে থাকবে।
-            </p>
-        </div>
+<div class="arabic">
+وَالسَّابِقُونَ السَّابِقُونَ
+أُولَٰئِكَ الْمُقَرَّبُونَ
+</div>
 
-    </section>
+<div class="info">
+
+<p>
+<span class="label">✨ সূরাটির মূল শিক্ষা:</span>
+সূরা আল-ওয়াকিয়ায় কিয়ামত, মানুষের পরিণতি,
+জান্নাত-জাহান্নাম এবং আল্লাহর অসীম ক্ষমতা সম্পর্কে
+গুরুত্বপূর্ণ আলোচনা রয়েছে।
+</p>
+
+<p>
+<span class="label">📝 আমাদের শিক্ষা:</span>
+দুনিয়ার জীবন সাময়িক এবং প্রত্যেক মানুষকে আখিরাতের
+জন্য প্রস্তুতি নিতে হবে। তাই কোরআন তিলাওয়াতের পাশাপাশি
+এর অর্থ ও শিক্ষা জীবনে বাস্তবায়নের চেষ্টা করা উচিত।
+</p>
+
+</div>
+
+<div class="warning">
+📌 <strong>তথ্য যাচাই:</strong>
+“প্রতি রাতে সূরা ওয়াকিয়া পড়লে কখনো দারিদ্র্য আসবে না”—
+এমন প্রচলিত বর্ণনাকে এখানে নিশ্চিত সহিহ হাদিস হিসেবে
+দাবি করা হচ্ছে না। নির্ভরযোগ্য সূত্র ছাড়া কোনো বিশেষ
+ফজিলত যোগ করা হবে না।
+</div>
+
+</section>
+
+
+<!-- ================= মুলক ================= -->
+
+<section class="amal-card mulk">
+
+<span class="badge">📿 আমল ০২</span>
+
+<h2>🌌 সূরা আল-মুলক</h2>
+
+<div class="info">
+
+<p><span class="label">📖 সূরা নম্বর:</span> ৬৭</p>
+<p><span class="label">📚 পারা:</span> ২৯</p>
+<p><span class="label">🔢 আয়াত:</span> ৩০</p>
+
+<p>
+<span class="label">⏰ কখন পড়বেন:</span>
+রাতে পড়ার আমল হিসেবে রাখা যায়। তবে নির্দিষ্ট একটি
+সময়কে বাধ্যতামূলক বলা হবে না।
+</p>
+
+<p>
+<span class="label">📿 কীভাবে আমল করবেন:</span>
+সম্পূর্ণ ৩০ আয়াত তিলাওয়াত করুন এবং আল্লাহর সৃষ্টি,
+ক্ষমতা ও আখিরাতের জবাবদিহিতা নিয়ে চিন্তা করুন।
+</p>
+
+</div>
+
+<div class="arabic">
+تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ
+وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ
+</div>
+
+<div class="info">
+
+<p>
+<span class="label">✨ ফজিলত:</span>
+হাদিসে ৩০ আয়াতের এই সূরার এমন একজন ব্যক্তির জন্য
+সুপারিশ করার কথা এসেছে, যতক্ষণ না তাকে ক্ষমা করা হয়।
+</p>
+
+<p>
+<span class="label">📝 শিক্ষা:</span>
+জীবন ও মৃত্যু পরীক্ষা। তাই মানুষের উচিত আল্লাহর
+ক্ষমতা স্মরণ করা এবং আখিরাতের জন্য প্রস্তুতি নেওয়া।
+</p>
+
+<p>
+<span class="label">📚 সূত্র:</span>
+জামে‘ আত-তিরমিজি, হাদিস ২৮৯১ — হাদিসটি হাসান হিসেবে
+গ্রেড করা হয়েছে।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= কাহাফ ================= -->
+
+<section class="amal-card kahf">
+
+<span class="badge">📿 আমল ০৩</span>
+
+<h2>🌿 সূরা আল-কাহাফ</h2>
+
+<div class="info">
+
+<p><span class="label">📖 সূরা নম্বর:</span> ১৮</p>
+<p><span class="label">📚 পারা:</span> ১৫–১৬</p>
+<p><span class="label">🔢 আয়াত:</span> ১১০</p>
+
+<p>
+<span class="label">⏰ সময়:</span>
+জুমার দিন বা রাতে সূরা আল-কাহাফ পড়ার আমল সম্পর্কে
+বর্ণনা রয়েছে।
+</p>
+
+<p>
+<span class="label">📿 বিশেষ আমল:</span>
+সূরার প্রথম ১০ আয়াত মুখস্থ করার চেষ্টা করা।
+</p>
+
+</div>
+
+<div class="arabic">
+الْحَمْدُ لِلَّهِ الَّذِي أَنْزَلَ
+عَلَىٰ عَبْدِهِ الْكِتَابَ
+</div>
+
+<div class="info">
+
+<p>
+<span class="label">✨ ফজিলত:</span>
+সহিহ মুসলিমে সূরা আল-কাহাফের প্রথম ১০ আয়াত
+মুখস্থ করার মাধ্যমে দাজ্জালের ফিতনা থেকে সুরক্ষার
+কথা বর্ণিত হয়েছে।
+</p>
+
+<p>
+<span class="label">📝 শিক্ষা:</span>
+এই সূরায় ঈমানের পরীক্ষা, ধৈর্য, আল্লাহর ওপর ভরসা,
+জ্ঞান এবং দুনিয়ার মোহ সম্পর্কে গুরুত্বপূর্ণ শিক্ষা রয়েছে।
+</p>
+
+<p>
+<span class="label">📚 সূত্র:</span>
+সহিহ মুসলিম, হাদিস ৮০৯a।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= নতুন আমল ================= -->
+
+<section class="add">
+
+<h2>➕ নতুন আমল যোগ করুন</h2>
+
+<p>
+এখান থেকে পরবর্তীতে ০৪ নম্বর, ০৫ নম্বর করে
+নতুন নতুন আমল যোগ করা যাবে।
+</p>
+
+<p>
+প্রতিটি নতুন আমলের সঙ্গে সম্ভব হলে
+<strong>সময় • নিয়ম • ফজিলত • সূত্র • শিক্ষা</strong>
+দেওয়া হবে।
+</p>
+
+</section>
+
+
+<!-- ================= HOME ================= -->
+
+<div class="home">
+<a href="index.html">🏠 হোম পেজে ফিরে যান</a>
+</div>
 
 </main>
 
+
 <footer>
 
-    <p>© 2026 Abdullah Musafir Media</p>
-
-    <p>
-        কুরআন ও সহিহ সুন্নাহর আলোকে উপকারী জ্ঞান
-    </p>
+<p>📿 <strong>আমল ও নেক কাজ</strong></p>
+<p>আল্লাহ আমাদের নেক আমল করার তাওফিক দান করুন। আমিন।</p>
 
 </footer>
 
 </body>
-              </html>
+</html>
