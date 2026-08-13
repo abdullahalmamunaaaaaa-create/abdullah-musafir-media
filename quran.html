@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>কুরআন | Abdullah Musafir Media</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f8f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #006400, #008000);
+            color: white;
+            text-align: center;
+            padding: 38px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 29px;
+        }
+
+        header p {
+            margin: 10px 0 0;
+        }
+
+        nav {
+            background: white;
+            text-align: center;
+            padding: 12px 8px;
+            box-shadow: 0 2px 8px #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            display: inline-block;
+            background: #008000;
+            color: white;
+            text-decoration: none;
+            padding: 9px 12px;
+            margin: 4px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            background: #005500;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 15px;
+        }
+
+        .intro {
+            background: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 12px #ddd;
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            color: #006400;
+        }
+
+        .intro p {
+            line-height: 1.9;
+        }
+
+        .search-box {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            max-width: 600px;
+            padding: 14px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #008000;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #006400;
+            margin: 35px 0 20px;
+        }
+
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .topic {
+            background: white;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px #ddd;
+            cursor: pointer;
+        }
+
+        .topic:hover {
+            transform: translateY(-2px);
+        }
+
+        .topic h3 {
+            color: #006400;
+            margin: 5px 0;
+        }
+
+        .verses {
+            display: grid;
+            gap: 20px;
+        }
+
+        .verse {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #ddd;
+        }
+
+        .verse h2 {
+            color: #006400;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .arabic {
+            direction: rtl;
+            text-align: center;
+            font-size: 28px;
+            line-height: 2.2;
+            margin: 20px 5px;
+        }
+
+        .pronunciation {
+            background: #f7faf7;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.9;
+        }
+
+        .meaning {
+            background: #f7faf7;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.9;
+            margin-top: 12px;
+        }
+
+        .reference {
+            background: #e8f5e9;
+            border-left: 4px solid #008000;
+            padding: 13px;
+            margin-top: 15px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        button {
+            border: none;
+            background: #008000;
+            color: white;
+            padding: 9px 14px;
+            margin: 4px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #005500;
+        }
+
+        .notice {
+            background: #fff8e1;
+            border-left: 4px solid #c28b00;
+            padding: 15px;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #005500;
+            color: white;
+            text-align: center;
+            padding: 28px 10px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 7px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            .topics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .arabic {
+                font-size: 23px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>📖 পবিত্র কুরআন</h1>
+    <p>কুরআনের আয়াত • বিষয়ভিত্তিক শিক্ষা • দলিলসহ</p>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="amal.html">📿 আমল</a>
+    <a href="quran.html">📖 কুরআন</a>
+    <a href="hadith.html">📜 হাদিস</a>
+    <a href="dua.html">🤲 দোয়া</a>
+    <a href="stories.html">🌙 গল্প</a>
+    <a href="books.html">📚 বই</a>
+</nav>
+
+<main>
+
+<section class="intro">
+
+    <h2>কুরআনের আলো</h2>
+
+    <p>
+        আল্লাহর কিতাব থেকে নির্বাচিত আয়াতগুলো
+        বিষয়ভিত্তিকভাবে পড়ুন এবং বুঝুন।
+    </p>
+
+    <div class="notice">
+        <strong>📌 গুরুত্বপূর্ণ:</strong><br>
+        এখানে কুরআনের মূল আরবি আয়াতের সঙ্গে
+        সূরা ও আয়াত নম্বর উল্লেখ করা হবে।
+        বাংলা অর্থ অনুবাদ হিসেবে দেওয়া হবে।
+    </div>
+
+</section>
+
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 সূরা, বিষয় বা আয়াত খুঁজুন..."
+        onkeyup="searchVerses()"
+    >
+
+</div>
+
+
+<h2 class="section-title">📚 বিষয়ভিত্তিক কুরআন</h2>
+
+<section class="topics">
+
+    <div class="topic" onclick="showTopic('ঈমান')">
+        <h3>🕋 ঈমান</h3>
+        <p>আল্লাহ ও ঈমান সম্পর্কিত আয়াত</p>
+    </div>
+
+    <div class="topic" onclick="showTopic('সালাত')">
+        <h3>🕌 সালাত</h3>
+        <p>নামাজ সম্পর্কিত আয়াত</p>
+    </div>
+
+    <div class="topic" onclick="showTopic('সবর')">
+        <h3>🌿 সবর</h3>
+        <p>ধৈর্য ও দৃঢ়তার শিক্ষা</p>
+    </div>
+
+    <div class="topic" onclick="showTopic('তাওবা')">
+        <h3>🤲 তাওবা</h3>
+        <p>তাওবা ও আল্লাহর রহমত</p>
+    </div>
+
+    <div class="topic" onclick="showTopic('পিতা-মাতা')">
+        <h3>👨‍👩‍👦 পিতা-মাতা</h3>
+        <p>পিতা-মাতার অধিকার</p>
+    </div>
+
+    <div class="topic" onclick="showTopic('আখিরাত')">
+        <h3>🌙 আখিরাত</h3>
+        <p>পরকাল সম্পর্কিত শিক্ষা</p>
+    </div>
+
+</section>
+
+
+<h2 class="section-title">📖 নির্বাচিত আয়াত</h2>
+
+<section class="verses" id="verseList">
+
+
+<!-- আয়াত ১ -->
+
+<article class="verse" data-topic="ঈমান">
+
+    <h2>আল্লাহর স্মরণ</h2>
+
+    <p class="arabic">
+        أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ
+    </p>
+
+    <div class="pronunciation">
+
+        <strong>উচ্চারণ:</strong><br>
+
+        আলা বিযিকরিল্লাহি তাতমাইন্নুল কুলূব।
+
+    </div>
+
+    <div class="meaning">
+
+        <strong>অর্থ:</strong><br>
+
+        জেনে রাখো, আল্লাহর স্মরণেই অন্তরসমূহ
+        প্রশান্ত হয়।
+
+    </div>
+
+    <div class="reference">
+
+        <strong>📚 দলিল:</strong><br>
+
+        সূরা আর-রাদ, ১৩:২৮
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="copyText(this)">
+            📋 কপি
+        </button>
+
+        <button onclick="shareVerse(this)">
+            🔗 শেয়ার
+        </button>
+
+    </div>
+
+</article>
+
+
+<!-- আয়াত ২ -->
+
+<article class="verse" data-topic="সবর">
+
+    <h2>সবর ও সালাতের মাধ্যমে সাহায্য</h2>
+
+    <p class="arabic">
+        يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا
+        بِالصَّبْرِ وَالصَّلَاةِ
+        إِنَّ اللَّهَ مَعَ الصَّابِرِينَ
+    </p>
+
+    <div class="pronunciation">
+
+        <strong>উচ্চারণ:</strong><br>
+
+        ইয়া আইয়ুহাল্লাযীনা আমানুস্তাঈনূ
+        বিসসবরি ওয়াসসালাহ। ইন্নাল্লাহা
+        মাআস সাবিরীন।
+
+    </div>
+
+    <div class="meaning">
+
+        <strong>অর্থ:</strong><br>
+
+        হে মুমিনগণ! তোমরা ধৈর্য ও সালাতের
+        মাধ্যমে সাহায্য প্রার্থনা করো।
+        নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সঙ্গে আছেন।
+
+    </div>
+
+    <div class="reference">
+
+        <strong>📚 দলিল:</strong><br>
+
+        সূরা আল-বাকারা, ২:১৫৩
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="copyText(this)">
+            📋 কপি
+        </button>
+
+        <button onclick="shareVerse(this)">
+            🔗 শেয়ার
+        </button>
+
+    </div>
+
+</article>
+
+
+<!-- আয়াত ৩ -->
+
+<article class="verse" data-topic="পিতা-মাতা">
+
+    <h2>পিতা-মাতার প্রতি সদাচরণ</h2>
+
+    <p class="arabic">
+        وَبِالْوَالِدَيْنِ إِحْسَانًا
+    </p>
+
+    <div class="pronunciation">
+
+        <strong>উচ্চারণ:</strong><br>
+
+        ওয়া বিল-ওয়ালিদাইনি ইহসানা।
+
+    </div>
+
+    <div class="meaning">
+
+        <strong>অর্থ:</strong><br>
+
+        এবং পিতা-মাতার সঙ্গে সদাচরণ করো।
+
+    </div>
+
+    <div class="reference">
+
+        <strong>📚 দলিল:</strong><br>
+
+        সূরা আল-বাকারা, ২:৮৩
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="copyText(this)">
+            📋 কপি
+        </button>
+
+        <button onclick="shareVerse(this)">
+            🔗 শেয়ার
+        </button>
+
+    </div>
+
+</article>
+
+
+<!-- আয়াত ৪ -->
+
+<article class="verse" data-topic="আখিরাত">
+
+    <h2>আল্লাহর রহমত থেকে নিরাশ না হওয়া</h2>
+
+    <p class="arabic">
+        لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ
+    </p>
+
+    <div class="pronunciation">
+
+        <strong>উচ্চারণ:</strong><br>
+
+        লা তাকনাতু মির রাহমাতিল্লাহ।
+
+    </div>
+
+    <div class="meaning">
+
+        <strong>অর্থ:</strong><br>
+
+        তোমরা আল্লাহর রহমত থেকে নিরাশ হয়ো না।
+
+    </div>
+
+    <div class="reference">
+
+        <strong>📚 দলিল:</strong><br>
+
+        সূরা আয-যুমার, ৩৯:৫৩
+
+    </div>
+
+    <div class="buttons">
+
+        <button onclick="copyText(this)">
+            📋 কপি
+        </button>
+
+        <button onclick="shareVerse(this)">
+            🔗 শেয়ার
+        </button>
+
+    </div>
+
+</article>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Abdullah Musafir Media</p>
+
+    <p>
+        কুরআন ও সহিহ সুন্নাহর আলোকে উপকারী জ্ঞান
+    </p>
+
+</footer>
+
+
+<script>
+
+function searchVerses() {
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    let verses =
+        document.querySelectorAll(".verse");
+
+    verses.forEach(function(verse) {
+
+        let text =
+            verse.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            verse.style.display = "block";
+
+        } else {
+
+            verse.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+function showTopic(topic) {
+
+    let verses =
+        document.querySelectorAll(".verse");
+
+    verses.forEach(function(verse) {
+
+        let verseTopic =
+            verse.getAttribute("data-topic");
+
+        if (verseTopic === topic) {
+
+            verse.style.display = "block";
+
+            verse.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+}
+
+
+function copyText(button) {
+
+    let verse =
+        button.closest(".verse");
+
+    let text =
+        verse.innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("আয়াতের তথ্য কপি হয়েছে।");
+
+}
+
+
+function shareVerse(button) {
+
+    let verse =
+        button.closest(".verse");
+
+    let text =
+        verse.innerText;
+
+    if (navigator.share) {
+
+        navigator.share({
+            title: "কুরআনের আয়াত",
+            text: text
+        });
+
+    } else {
+
+        navigator.clipboard.writeText(text);
+
+        alert("শেয়ার করার জন্য তথ্য কপি হয়েছে।");
+
+    }
+
+}
+
+</script>
+
+</body>
+  </html>
