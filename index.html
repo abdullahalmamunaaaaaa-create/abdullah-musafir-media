@@ -86,7 +86,6 @@
             font-size: 15px;
         }
 
-        /* Search */
         .search-box {
             background: white;
             padding: 22px;
@@ -265,7 +264,7 @@
     <a href="stories.html">🌙 গল্প</a>
     <a href="books.html">📚 বই</a>
     <a href="contact.html">📞 Contact</a>
-    <a href="qudrat.html" class="menu-btn">🌿 কুদরত</a>
+    <a href="qudrat.html">🌿 কুদরত</a>
 </nav>
 
 <main>
@@ -281,7 +280,6 @@
         </p>
     </section>
 
-    <!-- Search -->
     <section class="search-box">
 
         <h2>🔎 প্রয়োজনীয় বিষয় খুঁজুন</h2>
@@ -289,7 +287,7 @@
         <input
             type="text"
             id="searchInput"
-            placeholder="যেমন: হাদিস, আমল, দোয়া, গল্প, বই..."
+            placeholder="যেমন: হাদিস, আমল, দোয়া, গল্প, বই, কুদরত..."
             onkeydown="if(event.key === 'Enter') searchSite()"
         >
 
@@ -370,6 +368,16 @@
                 এবং বিভিন্ন উপকারী বিষয়।
             </p>
             <a href="articles.html">লেখা পড়ুন</a>
+        </div>
+
+        <!-- কুদরত -->
+        <div class="card">
+            <h3>🌿 কুদরত</h3>
+            <p>
+                আল্লাহর কুদরতের নিদর্শন,
+                প্রাণী, প্রকৃতি ও সৃষ্টিজগত সম্পর্কে জানুন।
+            </p>
+            <a href="qudrat.html">কুদরত দেখুন</a>
         </div>
 
         <div class="card">
@@ -552,6 +560,17 @@ function searchSite() {
     ) {
 
         window.location.href = "articles.html";
+        return;
+    }
+
+    /* কুদরত */
+    if (
+        search.includes("কুদরত") ||
+        search.includes("সৃষ্টি") ||
+        search.includes("প্রকৃতি")
+    ) {
+
+        window.location.href = "qudrat.html";
         return;
     }
 
