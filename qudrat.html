@@ -1,407 +1,421 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>আল্লাহর কুদরতের নিদর্শন | Abdullah Musafir Media</title>
+<title>আল্লাহর কুদরত — মৌমাছি</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+*{
+  box-sizing:border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f3f8f4;
-            color: #333;
-            line-height: 1.9;
-        }
+body{
+  margin:0;
+  font-family:Arial, "Noto Sans Bengali", sans-serif;
+  background:linear-gradient(135deg,#fff8dc,#f0fff4);
+  color:#17351f;
+  line-height:1.8;
+}
 
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #006400, #008000);
-            color: white;
-            text-align: center;
-            padding: 38px 15px;
-        }
+header{
+  background:linear-gradient(135deg,#176b35,#0b4521);
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+  box-shadow:0 4px 15px #0003;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 29px;
-        }
+header h1{
+  margin:0;
+  font-size:30px;
+}
 
-        header p {
-            margin: 8px 0 0;
-            font-size: 15px;
-        }
+header p{
+  margin:5px 0 0;
+  opacity:.9;
+}
 
-        /* Navigation */
-        nav {
-            background: white;
-            text-align: center;
-            padding: 12px 8px;
-            box-shadow: 0 2px 8px #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+.container{
+  width:92%;
+  max-width:950px;
+  margin:25px auto;
+}
 
-        nav a {
-            display: inline-block;
-            background: #008000;
-            color: white;
-            text-decoration: none;
-            padding: 9px 13px;
-            margin: 4px;
-            border-radius: 6px;
-            font-size: 13px;
-        }
+.hero{
+  background:white;
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 5px 20px #0002;
+  text-align:center;
+  overflow:hidden;
+}
 
-        nav a:hover {
-            background: #005500;
-        }
+.bee-image{
+  width:100%;
+  max-width:650px;
+  height:auto;
+  border-radius:18px;
+  background:#fff4b8;
+}
 
-        /* Main */
-        main {
-            max-width: 950px;
-            margin: auto;
-            padding: 30px 15px;
-        }
+h2{
+  color:#12652e;
+  border-left:5px solid #e4a900;
+  padding-left:12px;
+  margin-top:30px;
+}
 
-        /* Intro */
-        .intro {
-            background: white;
-            padding: 30px 22px;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 3px 12px #ddd;
-            margin-bottom: 25px;
-        }
+.card{
+  background:white;
+  padding:22px;
+  margin:20px 0;
+  border-radius:18px;
+  box-shadow:0 4px 15px #0002;
+}
 
-        .intro .icon {
-            font-size: 55px;
-        }
+.ayah{
+  background:#fffbea;
+  border:2px solid #e7c65c;
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+}
 
-        .intro h2 {
-            color: #006400;
-            margin: 8px 0;
-        }
+.arabic{
+  font-size:26px;
+  direction:rtl;
+  line-height:2.2;
+  color:#174f2b;
+}
 
-        /* Content Card */
-        .content-card {
-            background: white;
-            padding: 28px 22px;
-            border-radius: 14px;
-            box-shadow: 0 3px 12px #ddd;
-            margin-bottom: 25px;
-        }
+.translation{
+  font-size:18px;
+  margin-top:12px;
+}
 
-        .content-card h2 {
-            color: #006400;
-            margin-top: 0;
-        }
+.info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
 
-        .content-card h3 {
-            color: #008000;
-        }
+.info-box{
+  background:#f3fff5;
+  border-radius:15px;
+  padding:18px;
+  border:1px solid #cce7d2;
+}
 
-        /* Quran Box */
-        .quran-box {
-            background: #e8f5e9;
-            border-left: 5px solid #008000;
-            padding: 22px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
+.info-box strong{
+  color:#12652e;
+}
 
-        .arabic {
-            direction: rtl;
-            text-align: right;
-            font-size: 25px;
-            line-height: 2.2;
-            font-family: "Times New Roman", serif;
-        }
+.lesson{
+  background:linear-gradient(135deg,#fff8cf,#f5ffe9);
+  border-radius:18px;
+  padding:22px;
+  border:1px solid #ead67a;
+}
 
-        .translation {
-            margin-top: 15px;
-            font-size: 15px;
-        }
+footer{
+  margin-top:35px;
+  background:#0b4521;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 
-        /* Facts */
-        .facts {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-top: 20px;
-        }
+@media(max-width:600px){
+  header h1{
+    font-size:24px;
+  }
 
-        .fact {
-            background: #f7faf7;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-        }
+  .arabic{
+    font-size:22px;
+  }
 
-        .fact h3 {
-            margin-top: 0;
-        }
-
-        /* Lesson */
-        .lesson {
-            background: #fff8e1;
-            border-left: 5px solid #c28b00;
-            padding: 22px;
-            border-radius: 8px;
-            margin-top: 25px;
-        }
-
-        .lesson h2 {
-            margin-top: 0;
-            color: #7a5700;
-        }
-
-        /* Back Button */
-        .back {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .back a {
-            display: inline-block;
-            background: #006400;
-            color: white;
-            text-decoration: none;
-            padding: 12px 22px;
-            border-radius: 7px;
-        }
-
-        .back a:hover {
-            background: #004d00;
-        }
-
-        /* Footer */
-        footer {
-            background: #005500;
-            color: white;
-            text-align: center;
-            padding: 30px 10px;
-            margin-top: 40px;
-        }
-
-        footer p {
-            margin: 7px;
-            font-size: 13px;
-        }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-
-            header h1 {
-                font-size: 23px;
-            }
-
-            nav a {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-
-            .facts {
-                grid-template-columns: 1fr;
-            }
-
-            .arabic {
-                font-size: 22px;
-            }
-
-            .content-card,
-            .intro {
-                padding: 22px 17px;
-            }
-        }
-    </style>
+  .container{
+    width:94%;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>🌿 আল্লাহর কুদরতের নিদর্শন</h1>
-    <p>সৃষ্টিজগতের বিস্ময়কর নিদর্শন থেকে শিক্ষা</p>
+  <h1>🌿 আল্লাহর কুদরত</h1>
+  <p>মৌমাছি ও মধুর আশ্চর্য সৃষ্টি</p>
 </header>
 
-<nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="about.html">👤 About</a>
-    <a href="articles.html">📝 Articles</a>
-    <a href="amal.html">📿 আমল</a>
-    <a href="quran.html">📖 কুরআন</a>
-    <a href="hadith.html">📜 হাদিস</a>
-    <a href="dua.html">🤲 দোয়া</a>
-    <a href="stories.html">🌙 গল্প</a>
-    <a href="books.html">📚 বই</a>
-</nav>
+<div class="container">
 
-<main>
+  <!-- মৌমাছির ছবি -->
+  <section class="hero">
 
-    <!-- Intro -->
-    <section class="intro">
+    <svg class="bee-image"
+         viewBox="0 0 800 500"
+         xmlns="http://www.w3.org/2000/svg">
 
-        <div class="icon">🐝</div>
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#dff7ff"/>
+          <stop offset="100%" stop-color="#fff8c7"/>
+        </linearGradient>
+      </defs>
 
-        <h2>মৌমাছি — আল্লাহর এক বিস্ময়কর সৃষ্টি</h2>
+      <rect width="800" height="500" fill="url(#sky)"/>
 
-        <p>
-            ছোট্ট একটি প্রাণী মৌমাছি। কিন্তু তার জীবনযাপন,
-            দলবদ্ধতা এবং মধু তৈরির ব্যবস্থা আমাদের জন্য
-            আল্লাহ তাআলার অসীম কুদরত ও জ্ঞানের কথা স্মরণ করিয়ে দেয়।
-        </p>
+      <!-- সূর্য -->
+      <circle cx="690" cy="90" r="55" fill="#ffd84d"/>
 
-    </section>
+      <!-- ফুল -->
+      <g>
+        <line x1="120" y1="450" x2="120" y2="270"
+              stroke="#398a3f" stroke-width="12"/>
+        <circle cx="120" cy="245" r="35" fill="#ffcf35"/>
+        <circle cx="90" cy="230" r="30" fill="#ff829d"/>
+        <circle cx="150" cy="230" r="30" fill="#ff829d"/>
+        <circle cx="90" cy="270" r="30" fill="#ff829d"/>
+        <circle cx="150" cy="270" r="30" fill="#ff829d"/>
+        <circle cx="120" cy="250" r="18" fill="#e4a900"/>
+      </g>
 
-    <!-- Quran -->
-    <section class="content-card">
+      <!-- মৌমাছির ডানা -->
+      <ellipse cx="420" cy="185" rx="75" ry="45"
+               fill="#ffffff" opacity=".75"
+               transform="rotate(-25 420 185)"/>
+      <ellipse cx="505" cy="185" rx="75" ry="45"
+               fill="#ffffff" opacity=".75"
+               transform="rotate(25 505 185)"/>
 
-        <h2>📖 কুরআনে মৌমাছি</h2>
+      <!-- মৌমাছির শরীর -->
+      <ellipse cx="465" cy="270" rx="125" ry="85"
+               fill="#f6b900"
+               stroke="#5b4100"
+               stroke-width="7"/>
 
-        <p>
-            আল্লাহ তাআলা পবিত্র কুরআনে মৌমাছির কথা উল্লেখ করেছেন।
-            সূরা আন-নাহলের একটি অংশে মৌমাছিকে পাহাড়, গাছ এবং
-            মানুষের তৈরি ঘরে বাসস্থান গ্রহণের নির্দেশ দেওয়ার কথা এসেছে।
-        </p>
+      <!-- কালো দাগ -->
+      <path d="M405 205 Q430 270 405 335"
+            fill="none" stroke="#282828" stroke-width="25"/>
+      <path d="M455 190 Q480 270 455 350"
+            fill="none" stroke="#282828" stroke-width="25"/>
+      <path d="M510 200 Q535 270 510 340"
+            fill="none" stroke="#282828" stroke-width="25"/>
 
-        <div class="quran-box">
+      <!-- মাথা -->
+      <circle cx="345" cy="270" r="58"
+              fill="#282828"/>
 
-            <div class="arabic">
-                وَأَوْحَىٰ رَبُّكَ إِلَى النَّحْلِ أَنِ اتَّخِذِي مِنَ الْجِبَالِ بُيُوتًا وَمِنَ الشَّجَرِ وَمِمَّا يَعْرِشُونَ
-            </div>
+      <!-- চোখ -->
+      <circle cx="325" cy="250" r="12" fill="white"/>
+      <circle cx="328" cy="250" r="5" fill="black"/>
 
-            <div class="translation">
-                <strong>অর্থ:</strong>
-                “আর আপনার রব মৌমাছিকে নির্দেশ দিলেন—
-                পাহাড়ে, গাছে এবং মানুষ যে ঘর তৈরি করে তাতে
-                বাসস্থান গ্রহণ করো।”
-            </div>
+      <!-- শুঁড় -->
+      <path d="M315 220 Q260 160 230 190"
+            fill="none" stroke="#282828" stroke-width="6"/>
+      <path d="M330 215 Q290 145 270 150"
+            fill="none" stroke="#282828" stroke-width="6"/>
 
-            <p>
-                <strong>সূরা আন-নাহল: ৬৮</strong>
-            </p>
+      <!-- হুল -->
+      <path d="M585 270 L655 250 L600 290 Z"
+            fill="#282828"/>
 
-        </div>
+      <!-- ফুলের পাপড়ি -->
+      <g opacity=".85">
+        <circle cx="700" cy="390" r="35" fill="#ff8eac"/>
+        <circle cx="750" cy="370" r="35" fill="#ff8eac"/>
+        <circle cx="750" cy="420" r="35" fill="#ff8eac"/>
+        <circle cx="700" cy="440" r="35" fill="#ff8eac"/>
+        <circle cx="725" cy="405" r="20" fill="#ffc928"/>
+      </g>
 
-    </section>
+      <text x="400" y="455"
+            text-anchor="middle"
+            font-size="30"
+            fill="#174f2b"
+            font-family="Arial">
+        আল্লাহর অপূর্ব সৃষ্টি — মৌমাছি
+      </text>
 
-    <!-- Honey -->
-    <section class="content-card">
+    </svg>
 
-        <h2>🍯 মধু — মানুষের জন্য উপকারী</h2>
-
-        <p>
-            মৌমাছি বিভিন্ন ফুল থেকে মধুরস সংগ্রহ করে এবং
-            তা থেকে মধু তৈরি করে। আল্লাহ তাআলা কুরআনে মধুর
-            ব্যাপারে মানুষের জন্য উপকারের কথা উল্লেখ করেছেন।
-        </p>
-
-        <div class="quran-box">
-
-            <div class="arabic">
-                يَخْرُجُ مِن بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَانُهُ فِيهِ شِفَاءٌ لِّلنَّاسِ
-            </div>
-
-            <div class="translation">
-                <strong>অর্থ:</strong>
-                “তার পেট থেকে বিভিন্ন রঙের পানীয় বের হয়,
-                যাতে মানুষের জন্য আরোগ্য রয়েছে।”
-            </div>
-
-            <p>
-                <strong>সূরা আন-নাহল: ৬৯</strong>
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- Interesting Facts -->
-    <section class="content-card">
-
-        <h2>🔎 মৌমাছি সম্পর্কে কিছু বিষয়</h2>
-
-        <div class="facts">
-
-            <div class="fact">
-                <h3>🐝 দলবদ্ধ জীবন</h3>
-                <p>
-                    মৌমাছি সাধারণত দলবদ্ধভাবে বসবাস করে এবং
-                    তাদের কলোনিতে বিভিন্ন ধরনের দায়িত্ব থাকে।
-                </p>
-            </div>
-
-            <div class="fact">
-                <h3>🏠 মৌচাক</h3>
-                <p>
-                    মৌমাছির তৈরি মৌচাক অত্যন্ত সুন্দর ও
-                    সুশৃঙ্খল একটি প্রাকৃতিক কাঠামো।
-                </p>
-            </div>
-
-            <div class="fact">
-                <h3>🌸 ফুল থেকে মধু</h3>
-                <p>
-                    মৌমাছি ফুল থেকে মধুরস সংগ্রহ করে এবং
-                    সেই প্রক্রিয়ার মাধ্যমে মধু তৈরি হয়।
-                </p>
-            </div>
-
-            <div class="fact">
-                <h3>🍯 মানুষের উপকার</h3>
-                <p>
-                    মধু একটি পরিচিত প্রাকৃতিক খাদ্য এবং
-                    কুরআনে এর মধ্যে মানুষের জন্য উপকারের কথা এসেছে।
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Lesson -->
-    <section class="lesson">
-
-        <h2>🌿 আমাদের জন্য শিক্ষা</h2>
-
-        <p>
-            একটি ছোট্ট মৌমাছির জীবনও আমাদের আল্লাহর
-            অসীম জ্ঞান ও সৃষ্টিশক্তির কথা স্মরণ করিয়ে দেয়।
-            তাই সৃষ্টিজগতের দিকে তাকিয়ে আমাদের উচিত
-            আল্লাহর কুদরত নিয়ে চিন্তা করা এবং তাঁর প্রতি
-            কৃতজ্ঞ হওয়া।
-        </p>
-
-        <p>
-            <strong>আল্লাহ তাআলা বলেন:</strong>
-            “নিশ্চয়ই আকাশমণ্ডলী ও পৃথিবীর সৃষ্টিতে এবং
-            রাত ও দিনের পরিবর্তনে চিন্তাশীলদের জন্য নিদর্শন রয়েছে।”
-        </p>
-
-    </section>
-
-    <!-- Back -->
-    <div class="back">
-        <a href="index.html">🏠 Home Page-এ ফিরে যান</a>
-    </div>
-
-</main>
-
-<footer>
-
-    <p>© 2026 Abdullah Musafir Media</p>
+    <h2>🐝 মৌমাছি — আল্লাহর এক আশ্চর্য সৃষ্টি</h2>
 
     <p>
-        জ্ঞান অর্জন করুন • সৃষ্টির নিদর্শন নিয়ে চিন্তা করুন
+      ছোট্ট একটি মৌমাছির জীবনব্যবস্থা দেখলেও বোঝা যায়,
+      আল্লাহ তাআলা কত নিখুঁতভাবে তাঁর সৃষ্টিকে পরিচালনা করেন।
     </p>
 
+  </section>
+
+
+  <!-- কুরআনের আয়াত -->
+  <section class="card">
+
+    <h2>📖 কুরআনের আয়াত</h2>
+
+    <div class="ayah">
+
+      <div class="arabic">
+        وَأَوْحَىٰ رَبُّكَ إِلَى النَّحْلِ أَنِ اتَّخِذِي مِنَ الْجِبَالِ بُيُوتًا وَمِنَ الشَّجَرِ وَمِمَّا يَعْرِشُونَ
+      </div>
+
+      <div class="translation">
+        “আর আপনার প্রতিপালক মৌমাছিকে নির্দেশ দিলেন—
+        পাহাড়ে, গাছে এবং মানুষ যে ঘর নির্মাণ করে তাতে বাসা তৈরি করো।”
+      </div>
+
+      <p>
+        <strong>সূরা আন-নাহল: ৬৮</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- মধু -->
+  <section class="card">
+
+    <h2>🍯 মধু সম্পর্কে</h2>
+
+    <p>
+      মৌমাছি ফুল থেকে মধুর উপাদান সংগ্রহ করে এবং
+      আল্লাহর নির্ধারিত ব্যবস্থায় তা মধুতে পরিণত করে।
+      মধু মানুষের জন্য একটি পরিচিত প্রাকৃতিক খাদ্য।
+    </p>
+
+    <div class="ayah">
+
+      <div class="arabic">
+        يَخْرُجُ مِن بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَانُهُ فِيهِ شِفَاءٌ لِّلنَّاسِ
+      </div>
+
+      <div class="translation">
+        “তার পেট থেকে বিভিন্ন রঙের পানীয় বের হয়,
+        যাতে মানুষের জন্য আরোগ্য রয়েছে।”
+      </div>
+
+      <p>
+        <strong>সূরা আন-নাহল: ৬৯</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- মৌমাছি সম্পর্কে তথ্য -->
+  <section class="card">
+
+    <h2>🔎 মৌমাছি সম্পর্কে কিছু তথ্য</h2>
+
+    <div class="info">
+
+      <div class="info-box">
+        🐝 <strong>মৌচাক</strong>
+        <p>
+          মৌমাছি অত্যন্ত সুন্দর ও সংগঠিতভাবে মৌচাক তৈরি করে।
+        </p>
+      </div>
+
+      <div class="info-box">
+        🌸 <strong>ফুল থেকে সংগ্রহ</strong>
+        <p>
+          মৌমাছি ফুলের কাছ থেকে মধু তৈরির উপাদান সংগ্রহ করে।
+        </p>
+      </div>
+
+      <div class="info-box">
+        🍯 <strong>মধু</strong>
+        <p>
+          মৌমাছির তৈরি মধু মানুষের পরিচিত একটি প্রাকৃতিক খাদ্য।
+        </p>
+      </div>
+
+      <div class="info-box">
+        🏡 <strong>শৃঙ্খলা</strong>
+        <p>
+          মৌমাছির সমাজে কাজের অসাধারণ সমন্বয় দেখা যায়।
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- কুদরতের শিক্ষা -->
+  <section class="card">
+
+    <h2>🌿 আল্লাহর কুদরতের শিক্ষা</h2>
+
+    <div class="lesson">
+
+      <p>
+        একটি ছোট প্রাণীর মধ্যেও আল্লাহ তাআলার অসীম জ্ঞান,
+        শক্তি ও হিকমতের নিদর্শন রয়েছে।
+      </p>
+
+      <p>
+        আমরা যখন মৌমাছির জীবন, তার মৌচাক এবং মধু দেখি,
+        তখন আমাদের উচিত আল্লাহর সৃষ্টি নিয়ে চিন্তা করা
+        এবং তাঁর প্রতি কৃতজ্ঞ হওয়া।
+      </p>
+
+      <p>
+        <strong>
+          “নিশ্চয়ই আল্লাহর সৃষ্টির মধ্যে চিন্তাশীল মানুষের জন্য
+          বহু নিদর্শন রয়েছে।”
+        </strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ভবিষ্যতে আরও বিষয় -->
+  <section class="card">
+
+    <h2>🌍 আল্লাহর কুদরতের আরও নিদর্শন</h2>
+
+    <div class="info">
+
+      <div class="info-box">
+        🐜 <strong>পিঁপড়া</strong>
+        <p>পিঁপড়ার জীবন ও সংগঠিত সমাজব্যবস্থা।</p>
+      </div>
+
+      <div class="info-box">
+        🐦 <strong>পাখি</strong>
+        <p>পাখির উড্ডয়ন ও আল্লাহর সৃষ্টি।</p>
+      </div>
+
+      <div class="info-box">
+        🐪 <strong>উট</strong>
+        <p>উটের শরীরের বিশেষ বৈশিষ্ট্য ও শিক্ষা।</p>
+      </div>
+
+      <div class="info-box">
+        🌳 <strong>গাছপালা</strong>
+        <p>প্রকৃতি ও উদ্ভিদের মধ্যে আল্লাহর নিদর্শন।</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+<footer>
+  <p>🌿 আল্লাহর সৃষ্টি নিয়ে চিন্তা করুন</p>
+  <p>© Abdullah Musafir Media</p>
 </footer>
 
 </body>
-</html>
+    </html>
