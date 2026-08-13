@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>হাদিসের আলো | Islamic Hadith</title>
+<title>দোয়া ও আমল | ইসলামিক</title>
 
 <style>
 *{
@@ -15,371 +15,236 @@
 
 body{
     font-family:"Noto Sans Bengali","SolaimanLipi",Arial,sans-serif;
-    background:
-        radial-gradient(circle at top,#183d35 0%,#071b17 42%,#020c0a 100%);
-    color:#f5fff9;
+    background:linear-gradient(135deg,#031b16,#073c30,#02120f);
+    color:#fff;
     line-height:1.9;
 }
 
-/* ===== HEADER ===== */
-
-.hero{
-    min-height:360px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+header{
     text-align:center;
-    padding:40px 20px;
-    position:relative;
-    overflow:hidden;
+    padding:65px 20px;
+    background:
+    radial-gradient(circle at top,#267c60,#06251e 65%,#020d0b);
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    background:rgba(71,211,155,.12);
-    left:-100px;
-    top:-100px;
-    filter:blur(8px);
+header .icon{
+    font-size:65px;
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:250px;
-    height:250px;
-    border-radius:50%;
-    background:rgba(231,194,76,.10);
-    right:-100px;
-    bottom:-100px;
-    filter:blur(8px);
+header h1{
+    color:#f5d77b;
+    font-size:43px;
+    margin:10px 0;
 }
 
-.hero-content{
-    position:relative;
-    z-index:2;
-}
-
-.hadith-icon{
-    font-size:68px;
-    margin-bottom:8px;
-    filter:drop-shadow(0 0 20px rgba(247,215,120,.3));
-}
-
-.hero h1{
-    font-size:44px;
-    color:#f6d879;
-    text-shadow:0 0 25px rgba(246,216,121,.2);
-}
-
-.hero p{
-    color:#bfe8d5;
+header p{
+    color:#c7eadb;
     font-size:17px;
-    margin-top:8px;
 }
-
-/* ===== MAIN ===== */
 
 .container{
     width:92%;
-    max-width:950px;
+    max-width:1050px;
     margin:auto;
-    padding:30px 0 70px;
+    padding:35px 0 70px;
 }
 
-/* ===== CARD ===== */
-
-.card{
-    background:rgba(10,48,40,.86);
-    border:1px solid rgba(126,222,180,.18);
-    border-radius:26px;
-    padding:30px;
-    margin-bottom:26px;
-    box-shadow:
-        0 18px 50px rgba(0,0,0,.28),
-        inset 0 1px rgba(255,255,255,.04);
-    backdrop-filter:blur(12px);
+.intro{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(245,215,123,.25);
+    padding:28px;
+    border-radius:25px;
+    margin-bottom:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 
-.card-title{
+.intro h2{
     color:#f5d77b;
-    font-size:27px;
-    margin-bottom:16px;
+    margin-bottom:12px;
 }
-
-.card p{
-    color:#e0f5e9;
-    font-size:16px;
-    margin-bottom:16px;
-}
-
-.highlight{
-    margin-top:20px;
-    padding:20px;
-    border-left:4px solid #e6c85f;
-    background:rgba(230,200,95,.07);
-    border-radius:14px;
-    color:#e5f8ed;
-}
-
-/* ===== INFO ===== */
 
 .section-title{
     text-align:center;
     color:#f5d77b;
-    font-size:28px;
-    margin:38px 0 22px;
+    font-size:30px;
+    margin:35px 0 25px;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:17px;
-}
+/* Dua cards */
 
-.info-box{
-    background:linear-gradient(
-        145deg,
-        rgba(21,75,61,.96),
-        rgba(7,35,29,.96)
-    );
-    border:1px solid rgba(123,218,174,.16);
-    border-radius:21px;
-    padding:21px;
+.dua-card{
+    border-radius:25px;
+    padding:25px;
+    margin:22px 0;
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
     transition:.3s;
 }
 
-.info-box:hover{
-    transform:translateY(-5px);
-    border-color:rgba(246,215,121,.45);
-    box-shadow:0 12px 35px rgba(0,0,0,.3);
+.dua-card:hover{
+    transform:translateY(-4px);
 }
 
-.info-box .icon{
-    font-size:31px;
-}
-
-.info-box h3{
-    color:#f5d77b;
-    font-size:18px;
-    margin:4px 0;
-}
-
-.info-box p{
-    color:#b9dfce;
-    font-size:14px;
-    margin:0;
-}
-
-/* ===== DISCUSSION ===== */
-
-.discussion{
-    position:relative;
-    overflow:hidden;
-}
-
-.discussion::before{
-    content:"ﷺ";
-    position:absolute;
-    right:20px;
-    top:10px;
-    font-size:55px;
-    color:rgba(246,215,121,.07);
-}
-
-.label{
+.dua-number{
     display:inline-block;
-    padding:7px 15px;
+    padding:5px 14px;
     border-radius:30px;
-    background:rgba(229,200,100,.11);
-    color:#f5d77b;
+    background:rgba(255,255,255,.12);
     font-size:14px;
-    margin-bottom:12px;
+    margin-bottom:8px;
 }
 
-.discussion h2{
-    color:#f8d978;
-    font-size:31px;
-    margin-bottom:20px;
+.dua-card h3{
+    font-size:22px;
+    margin-bottom:15px;
 }
 
-/* ===== HADITH ===== */
-
-.hadith-box{
-    margin:25px 0;
-    padding:28px 20px;
-    border-radius:22px;
+.arabic{
+    direction:rtl;
     text-align:center;
-    background:
-        linear-gradient(
-            135deg,
-            rgba(229,200,100,.08),
-            rgba(35,110,82,.13)
-        );
-    border:1px solid rgba(229,200,100,.22);
-    box-shadow:inset 0 1px rgba(255,255,255,.04);
-}
-
-.arabic-intro{
-    direction:rtl;
     font-family:"Amiri","Noto Naskh Arabic",serif;
-    font-size:20px;
-    color:#dff4e9;
-    margin-bottom:18px;
-}
-
-.arabic-hadith{
-    direction:rtl;
-    font-family:"Amiri","Noto Naskh Arabic",serif;
-    font-size:34px;
-    line-height:2.2;
-    color:#f6d879;
-    text-shadow:0 0 18px rgba(246,215,121,.12);
+    font-size:31px;
+    line-height:2.1;
+    color:#ffe69a;
+    padding:18px 10px;
 }
 
 .meaning{
-    margin-top:20px;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,.09);
-    color:#eaf9f1;
-    font-size:17px;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:15px;
+    color:#e7f7ef;
 }
 
 .source{
-    display:block;
-    margin-top:12px;
-    color:#9ed9bd;
+    color:#b8dfce;
     font-size:14px;
+    margin-top:8px;
 }
 
-/* ===== LESSON ===== */
+/* Different colors */
 
-.lesson{
-    background:rgba(54,139,101,.10);
-    border:1px solid rgba(118,215,169,.16);
-    border-radius:20px;
-    padding:22px;
-    margin-top:20px;
-}
+.c1{background:linear-gradient(135deg,#123d61,#071d31);}
+.c2{background:linear-gradient(135deg,#315126,#12280e);}
+.c3{background:linear-gradient(135deg,#593b1c,#271709);}
+.c4{background:linear-gradient(135deg,#4b285d,#21122c);}
+.c5{background:linear-gradient(135deg,#164f4b,#082523);}
+.c6{background:linear-gradient(135deg,#553126,#24150f);}
+.c7{background:linear-gradient(135deg,#234b5b,#0b252e);}
+.c8{background:linear-gradient(135deg,#4c3b16,#241d0b);}
+.c9{background:linear-gradient(135deg,#194d38,#09261d);}
+.c10{background:linear-gradient(135deg,#343b62,#171a32);}
 
-.lesson h3{
-    color:#f5d77b;
-    font-size:21px;
-    margin-bottom:10px;
-}
+.c11{background:linear-gradient(135deg,#4d2549,#251224);}
+.c12{background:linear-gradient(135deg,#20533e,#0d291f);}
+.c13{background:linear-gradient(135deg,#543c20,#281c0d);}
+.c14{background:linear-gradient(135deg,#273f62,#111d30);}
+.c15{background:linear-gradient(135deg,#51411e,#28200d);}
+.c16{background:linear-gradient(135deg,#552a38,#28131b);}
+.c17{background:linear-gradient(135deg,#194b55,#09252b);}
+.c18{background:linear-gradient(135deg,#3c4e26,#1c2511);}
+.c19{background:linear-gradient(135deg,#4e351f,#261a0f);}
+.c20{background:linear-gradient(135deg,#263f56,#101e2a);}
 
-.lesson ul{
-    padding-left:22px;
-    color:#e1f5ea;
-}
+.c21{background:linear-gradient(135deg,#3d2757,#1c1029);}
+.c22{background:linear-gradient(135deg,#185142,#09271f);}
+.c23{background:linear-gradient(135deg,#273f61,#111d2f);}
+.c24{background:linear-gradient(135deg,#514021,#28200e);}
+.c25{background:linear-gradient(135deg,#4d2944,#251322);}
+.c26{background:linear-gradient(135deg,#164e4a,#082521);}
+.c27{background:linear-gradient(135deg,#563427,#291710);}
+.c28{background:linear-gradient(135deg,#234966,#0d202f);}
+.c29{background:linear-gradient(135deg,#355226,#18260f);}
+.c30{background:linear-gradient(135deg,#4e3922,#271d10);}
 
-.lesson li{
-    margin:7px 0;
-}
+.c31{background:linear-gradient(135deg,#214c5d,#0c252e);}
+.c32{background:linear-gradient(135deg,#54293a,#28131c);}
+.c33{background:linear-gradient(135deg,#4c3c21,#251e0f);}
+.c34{background:linear-gradient(135deg,#233d5d,#101c2d);}
+.c35{background:linear-gradient(135deg,#194c37,#09251c);}
+.c36{background:linear-gradient(135deg,#4d2d50,#251426);}
+.c37{background:linear-gradient(135deg,#174d48,#082522);}
+.c38{background:linear-gradient(135deg,#4c2632,#251218);}
+.c39{background:linear-gradient(135deg,#4b4221,#25200e);}
+.c40{background:linear-gradient(135deg,#164f3b,#09271e);}
 
-/* ===== ADD NEW ===== */
+/* Add area */
 
 .add-box{
-    border:2px dashed rgba(246,215,121,.25);
-    background:rgba(246,215,121,.035);
+    margin-top:40px;
+    padding:30px;
+    border:2px dashed rgba(245,215,123,.35);
+    border-radius:25px;
+    text-align:center;
+    background:rgba(245,215,123,.04);
 }
 
 .add-box h2{
-    color:#f6d879;
+    color:#f5d77b;
+    margin-bottom:10px;
 }
 
-.add-box p{
-    color:#b9dfce;
-}
+/* Home */
 
-/* ===== HOME BUTTON ===== */
-
-.home-area{
+.home{
     text-align:center;
-    margin:40px 0 10px;
+    margin:45px 0 10px;
 }
 
-.home-btn{
+.home a{
     display:inline-block;
     text-decoration:none;
-    padding:13px 30px;
+    background:linear-gradient(135deg,#d4b24f,#f7df88);
+    color:#14251f;
+    padding:14px 32px;
     border-radius:50px;
-    background:linear-gradient(135deg,#d7b84f,#f5db83);
-    color:#122c23;
-    font-size:17px;
     font-weight:bold;
     box-shadow:0 10px 30px rgba(0,0,0,.3);
     transition:.3s;
 }
 
-.home-btn:hover{
-    transform:translateY(-3px) scale(1.02);
+.home a:hover{
+    transform:translateY(-3px);
 }
-
-/* ===== FOOTER ===== */
 
 footer{
     text-align:center;
-    padding:30px 15px;
-    background:rgba(0,0,0,.28);
-    color:#9bcbb5;
-    font-size:14px;
+    padding:30px;
+    background:rgba(0,0,0,.25);
+    color:#a9cfbf;
 }
 
 footer strong{
     color:#f5d77b;
 }
 
-/* ===== MOBILE ===== */
-
 @media(max-width:650px){
 
-    .hero{
-        min-height:300px;
+    header{
+        padding:45px 15px;
     }
 
-    .hadith-icon{
-        font-size:52px;
-    }
-
-    .hero h1{
+    header h1{
         font-size:34px;
-    }
-
-    .hero p{
-        font-size:14px;
     }
 
     .container{
         width:94%;
     }
 
-    .card{
+    .intro{
         padding:21px;
-        border-radius:21px;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .dua-card{
+        padding:20px;
     }
 
-    .section-title{
-        font-size:24px;
-    }
-
-    .discussion h2{
+    .arabic{
         font-size:26px;
     }
 
-    .arabic-hadith{
-        font-size:27px;
-    }
-
-    .card p{
-        font-size:15px;
+    .dua-card h3{
+        font-size:20px;
     }
 }
 </style>
@@ -387,303 +252,694 @@ footer strong{
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
-<header class="hero">
-    <div class="hero-content">
-
-        <div class="hadith-icon">📜</div>
-
-        <h1>হাদিসের আলো</h1>
-
-        <p>
-            নববী আদর্শ • সুন্দর জীবন • উত্তম চরিত্র
-        </p>
-
-    </div>
+<header>
+    <div class="icon">🤲</div>
+    <h1>দোয়া ও আমল</h1>
+    <p>আল্লাহর স্মরণে শান্তি • দোয়ায় মুমিনের শক্তি</p>
 </header>
-
 
 <main class="container">
 
+<section class="intro">
 
-<!-- ================= INTRO ================= -->
+<h2>🤲 দোয়ার গুরুত্ব</h2>
 
-<section class="card">
+<p>
+দোয়া হলো আল্লাহর কাছে নিজের প্রয়োজন, আশা, ভয় ও
+কল্যাণের কথা তুলে ধরা। একজন মুমিন সবসময় আল্লাহর
+কাছে সাহায্য ও রহমত কামনা করে।
+</p>
 
-    <h2 class="card-title">🌿 হাদিসের আলো</h2>
-
-    <p>
-        নববী জীবন অনুসরণ না করলে সেই জীবনে প্রকৃত শান্তি
-        ও কল্যাণ পাওয়া কঠিন। সুন্দর, আদর্শ ও শান্তিপূর্ণ জীবন
-        গঠনের জন্য রাসূলুল্লাহ ﷺ-এর সুন্নাহ ও হাদিসের অনুসরণ
-        করা অত্যন্ত গুরুত্বপূর্ণ।
-    </p>
-
-    <p>
-        রাসূলুল্লাহ ﷺ-এর জীবন আমাদের জন্য সর্বোত্তম আদর্শ।
-        তাঁর কথা, কাজ, আচার-আচরণ ও নসিহতের মধ্যে রয়েছে
-        মানবজীবনের জন্য অমূল্য শিক্ষা ও দিকনির্দেশনা।
-    </p>
-
-    <p>
-        তাই একটি সুন্দর ও আদর্শ জীবন গড়ার জন্য হাদিসের
-        শিক্ষা জানা এবং তা নিজের জীবনে বাস্তবায়ন করা
-        আমাদের কর্তব্য।
-    </p>
-
-    <div class="highlight">
-
-        📜 এখানে বিভিন্ন হাদিসের আলোকে আমাদের জীবনে
-        করণীয় গুরুত্বপূর্ণ বিষয়, উত্তম চরিত্র, ইবাদত,
-        মানুষের সঙ্গে সুন্দর আচরণ এবং দৈনন্দিন জীবনের
-        প্রয়োজনীয় শিক্ষা তুলে ধরা হবে।
-
-        <br><br>
-
-        ✨ সময় ও সুযোগ অনুযায়ী নতুন নতুন হাদিস ও
-        বিষয়ভিত্তিক আলোচনা এখানে যুক্ত করা হবে।
-
-    </div>
+<p>
+এই বিভাগে কোরআন ও নির্ভরযোগ্য হাদিসে বর্ণিত বিভিন্ন
+দোয়া বিষয়ভিত্তিকভাবে সাজানো হয়েছে। সময় ও সুযোগ অনুযায়ী
+এখানে নতুন নতুন দোয়া যোগ করা হবে।
+</p>
 
 </section>
 
-
-<!-- ================= WHAT WILL BE HERE ================= -->
-
-<h2 class="section-title">
-    📌 এই বিভাগে যা থাকবে
-</h2>
-
-<section class="grid">
-
-    <div class="info-box">
-        <div class="icon">📜</div>
-        <h3>বিষয়ভিত্তিক হাদিস</h3>
-        <p>
-            বিভিন্ন গুরুত্বপূর্ণ বিষয়ের ওপর নির্ভরযোগ্য হাদিস।
-        </p>
-    </div>
-
-    <div class="info-box">
-        <div class="icon">🌿</div>
-        <h3>হাদিসের শিক্ষা</h3>
-        <p>
-            হাদিস থেকে পাওয়া প্রয়োজনীয় শিক্ষা ও নসিহত।
-        </p>
-    </div>
-
-    <div class="info-box">
-        <div class="icon">❤️</div>
-        <h3>সুন্দর চরিত্র</h3>
-        <p>
-            উত্তম আখলাক ও মানুষের সঙ্গে সুন্দর আচরণ।
-        </p>
-    </div>
-
-    <div class="info-box">
-        <div class="icon">🕌</div>
-        <h3>ইবাদত ও আমল</h3>
-        <p>
-            ইবাদত ও দৈনন্দিন আমল সম্পর্কে নববী শিক্ষা।
-        </p>
-    </div>
-
-    <div class="info-box">
-        <div class="icon">🤝</div>
-        <h3>মানুষের সঙ্গে আচরণ</h3>
-        <p>
-            পরিবার, প্রতিবেশী ও সমাজের মানুষের হক ও আচরণ।
-        </p>
-    </div>
-
-    <div class="info-box">
-        <div class="icon">💡</div>
-        <h3>জীবনের দিকনির্দেশনা</h3>
-        <p>
-            হাদিসের আলোকে সুন্দর জীবন গঠনের শিক্ষা।
-        </p>
-    </div>
-
-</section>
+<h2 class="section-title">🌙 ৪০টি বিষয়ভিত্তিক দোয়া</h2>
 
 
-<!-- ==================================================
-     🌿 প্রথম আলোচনা
-================================================== -->
+<!-- 01 -->
+<section class="dua-card c1">
+<span class="dua-number">দোয়া ০১</span>
+<h3>📖 জ্ঞান বৃদ্ধির দোয়া</h3>
 
-<section class="card discussion">
-
-    <span class="label">
-        🌿 আজকের আলোচনা
-    </span>
-
-    <h2>
-        সুন্দর চরিত্র: একজন মুমিনের সৌন্দর্য
-    </h2>
-
-    <p>
-        রাসূলুল্লাহ ﷺ-এর শিক্ষা থেকে বোঝা যায়, একজন মানুষের
-        প্রকৃত সৌন্দর্য শুধু বাহ্যিক রূপে নয়; বরং তার চরিত্র,
-        আচরণ, কথা ও মানুষের সঙ্গে ব্যবহারের মধ্যে প্রকাশ পায়।
-    </p>
-
-    <div class="hadith-box">
-
-        <div class="arabic-intro">
-            عَنْ أَبِي هُرَيْرَةَ رَضِيَ اللَّهُ عَنْهُ قَالَ:
-            قَالَ رَسُولُ اللَّهِ ﷺ:
-        </div>
-
-        <div class="arabic-hadith">
-            أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا
-        </div>
-
-        <div class="meaning">
-
-            <strong>বাংলা অর্থ:</strong><br>
-
-            “মুমিনদের মধ্যে ঈমানে পরিপূর্ণ সেই ব্যক্তি,
-            যার চরিত্র সবচেয়ে সুন্দর।”
-
-            <span class="source">
-                📚 সূত্র: সুনান আবু দাউদ, ৪৬৮২
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <h3 class="card-title">
-        🌱 হাদিসের শিক্ষা
-    </h3>
-
-    <p>
-        এই হাদিস আমাদের শেখায় যে সুন্দর চরিত্র ঈমানের
-        গুরুত্বপূর্ণ অংশ। মানুষের সঙ্গে নম্রভাবে কথা বলা,
-        কাউকে কষ্ট না দেওয়া, ক্ষমা করা, অহংকার থেকে দূরে
-        থাকা এবং অন্যের প্রতি ভালো আচরণ করা একজন
-        মুমিনের গুরুত্বপূর্ণ গুণ।
-    </p>
-
-    <p>
-        সুন্দর চরিত্র শুধু পরিচিত মানুষের সঙ্গে ভালো
-        ব্যবহারের নাম নয়। পরিবার, আত্মীয়, প্রতিবেশী,
-        বন্ধু এবং সমাজের অন্যান্য মানুষের সঙ্গেও উত্তম
-        আচরণ করা উচিত।
-    </p>
-
-
-    <div class="lesson">
-
-        <h3>🕌 আমাদের করণীয়</h3>
-
-        <ul>
-            <li>মানুষের সঙ্গে নম্রভাবে কথা বলা।</li>
-            <li>কাউকে অপমান বা কষ্ট না দেওয়া।</li>
-            <li>রাগের সময় নিজেকে নিয়ন্ত্রণ করা।</li>
-            <li>অন্যের ভুল ক্ষমা করার চেষ্টা করা।</li>
-            <li>অহংকার থেকে দূরে থাকা।</li>
-            <li>সত্য কথা বলা ও আমানত রক্ষা করা।</li>
-            <li>বাবা-মা, পরিবার ও প্রতিবেশীর সঙ্গে সুন্দর আচরণ করা।</li>
-        </ul>
-
-    </div>
-
-
-    <h3 class="card-title" style="margin-top:25px;">
-        💡 আমাদের জন্য শিক্ষা
-    </h3>
-
-    <p>
-        একজন মুসলিমের চরিত্র তার ইসলামী শিক্ষার সুন্দর
-        প্রতিফলন। তাই শুধু ইবাদত করাই নয়, মানুষের সঙ্গে
-        আমাদের আচরণও সুন্দর হওয়া প্রয়োজন।
-    </p>
-
-    <div class="highlight">
-
-        🌸 সুন্দর কথা বলুন।<br>
-        🤝 মানুষের উপকার করুন।<br>
-        ❤️ ক্ষমাশীল হওয়ার চেষ্টা করুন।<br>
-        🌿 অহংকার থেকে দূরে থাকুন।<br>
-        🕌 রাসূলুল্লাহ ﷺ-এর আদর্শ অনুসরণ করুন।
-
-    </div>
-
-    <p style="text-align:center;margin-top:22px;">
-
-        <strong>
-            আল্লাহ তাআলা আমাদের সবাইকে উত্তম চরিত্র অর্জন
-            করার এবং রাসূলুল্লাহ ﷺ-এর আদর্শ অনুসরণ করার
-            তাওফিক দান করুন। আমিন।
-        </strong>
-
-    </p>
-
-</section>
-
-
-<!-- ==================================================
-     ➕ নতুন আলোচনা সরাসরি এখানে যোগ করবেন
-     
-     পরবর্তীতে আমি আপনাকে যে নতুন আলোচনা দেব,
-     সেটি এই জায়গায় বসালেই হবে।
-================================================== -->
-
-<section class="card add-box">
-
-    <h2>
-        ✨ আরও হাদিসের আলোচনা
-    </h2>
-
-    <p>
-        সময় ও সুযোগ অনুযায়ী নতুন নতুন বিষয় এখানে
-        যুক্ত করা হবে। প্রতিটি বিষয় আলাদা সুন্দর
-        আলোচনার আকারে সাজানো হবে।
-    </p>
-
-    <div class="highlight">
-
-        📌 <strong>নতুন আলোচনা যোগ করার জায়গা</strong><br><br>
-
-        এখানে পরবর্তী হাদিসের আলোচনা সরাসরি বসবে।
-        পুরোনো আলোচনাগুলো কাটতে হবে না।
-
-    </div>
-
-</section>
-
-
-<!-- ================= HOME BUTTON ================= -->
-
-<div class="home-area">
-
-    <a href="index.html" class="home-btn">
-        🏠 হোম পেজে ফিরে যান
-    </a>
-
+<div class="arabic">
+رَبِّ زِدْنِي عِلْمًا
 </div>
 
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <p>
-        📜 <strong>হাদিসের আলো</strong>
-    </p>
-
-    <p>
-        নববী আদর্শের আলোকে সুন্দর জীবন গড়ি
-    </p>
-
-</footer>
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমার রব, আমার জ্ঞান বৃদ্ধি করুন।
+<div class="source">📖 সূরা ত্ব-হা: ১১৪</div>
+</div>
+</section>
 
 
-</body>
-</html>
+<!-- 02 -->
+<section class="dua-card c2">
+<span class="dua-number">দোয়া ০২</span>
+<h3>🌍 দুনিয়া ও আখিরাতের কল্যাণ</h3>
+
+<div class="arabic">
+رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً
+وَفِي الْآخِرَةِ حَسَنَةً
+وَقِنَا عَذَابَ النَّارِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের দুনিয়ায় কল্যাণ দিন,
+আখিরাতেও কল্যাণ দিন এবং আগুনের শাস্তি থেকে রক্ষা করুন।
+<div class="source">📖 সূরা আল-বাকারা: ২০১</div>
+</div>
+</section>
+
+
+<!-- 03 -->
+<section class="dua-card c3">
+<span class="dua-number">দোয়া ০৩</span>
+<h3>👨‍👩‍👦 বাবা-মায়ের জন্য দোয়া</h3>
+
+<div class="arabic">
+رَبِّ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমার রব, তাঁরা যেমন ছোটবেলায় আমাকে
+লালন-পালন করেছেন, তেমনি তাঁদের প্রতি রহম করুন।
+<div class="source">📖 সূরা আল-ইসরা: ২৪</div>
+</div>
+</section>
+
+
+<!-- 04 -->
+<section class="dua-card c4">
+<span class="dua-number">দোয়া ০৪</span>
+<h3>❤️ অন্তরকে হেদায়াতে অটল রাখার দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا لَا تُزِغْ قُلُوبَنَا
+بَعْدَ إِذْ هَدَيْتَنَا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, হেদায়াত দেওয়ার পর
+আমাদের অন্তরকে বক্র করে দেবেন না।
+<div class="source">📖 সূরা আলে ইমরান: ৮</div>
+</div>
+</section>
+
+
+<!-- 05 -->
+<section class="dua-card c5">
+<span class="dua-number">দোয়া ০৫</span>
+<h3>🤲 ক্ষমার দোয়া</h3>
+
+<div class="arabic">
+رَبِّ اغْفِرْ لِي
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমার রব, আমাকে ক্ষমা করুন।
+</div>
+</section>
+
+
+<!-- 06 -->
+<section class="dua-card c6">
+<span class="dua-number">দোয়া ০৬</span>
+<h3>🌿 তাওবার দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا ظَلَمْنَا أَنْفُسَنَا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমরা নিজেদের ওপর জুলুম করেছি।
+<div class="source">📖 সূরা আল-আ'রাফ: ২৩</div>
+</div>
+</section>
+
+
+<!-- 07 -->
+<section class="dua-card c7">
+<span class="dua-number">দোয়া ০৭</span>
+<h3>🕌 নেক আমল কবুলের দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا تَقَبَّلْ مِنَّا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের পক্ষ থেকে কবুল করুন।
+<div class="source">📖 সূরা আল-বাকারা: ১২৭</div>
+</div>
+</section>
+
+
+<!-- 08 -->
+<section class="dua-card c8">
+<span class="dua-number">দোয়া ০৮</span>
+<h3>👨‍👩‍👧 পরিবার ও সন্তানদের জন্য দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا
+وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের স্ত্রী ও সন্তানদের
+আমাদের চোখের শীতলতা বানিয়ে দিন।
+<div class="source">📖 সূরা আল-ফুরকান: ৭৪</div>
+</div>
+</section>
+
+
+<!-- 09 -->
+<section class="dua-card c9">
+<span class="dua-number">দোয়া ০৯</span>
+<h3>📚 উপকারী জ্ঞানের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আপনি আমাকে যা শিখিয়েছেন
+তা দ্বারা আমাকে উপকৃত করুন।
+</div>
+</section>
+
+
+<!-- 10 -->
+<section class="dua-card c10">
+<span class="dua-number">দোয়া ১০</span>
+<h3>🛡️ আল্লাহর ওপর ভরসা</h3>
+
+<div class="arabic">
+حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আমাদের জন্য আল্লাহই যথেষ্ট এবং তিনি
+কতই না উত্তম কর্মবিধায়ক।
+<div class="source">📖 সূরা আলে ইমরান: ১৭৩</div>
+</div>
+</section>
+
+
+<!-- 11 -->
+<section class="dua-card c11">
+<span class="dua-number">দোয়া ১১</span>
+<h3>🌱 সরল পথের দোয়া</h3>
+
+<div class="arabic">
+اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আমাদের সরল পথ দেখান।
+<div class="source">📖 সূরা আল-ফাতিহা: ৬</div>
+</div>
+</section>
+
+
+<!-- 12 -->
+<section class="dua-card c12">
+<span class="dua-number">দোয়া ১২</span>
+<h3>🌸 নিয়ামতের শুকরিয়ার দোয়া</h3>
+
+<div class="arabic">
+رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমার রব, আপনার নিয়ামতের শুকরিয়া
+আদায় করার তাওফিক আমাকে দিন।
+<div class="source">📖 সূরা আন-নামল: ১৯</div>
+</div>
+</section>
+
+
+<!-- 13 -->
+<section class="dua-card c13">
+<span class="dua-number">দোয়া ১৩</span>
+<h3>🌿 সৎকর্মশীলদের সঙ্গে থাকার দোয়া</h3>
+
+<div class="arabic">
+تَوَفَّنِي مُسْلِمًا وَأَلْحِقْنِي بِالصَّالِحِينَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আমাকে মুসলিম অবস্থায় মৃত্যু দিন এবং
+সৎকর্মশীলদের সঙ্গে মিলিত করুন।
+<div class="source">📖 সূরা ইউসুফ: ১০১</div>
+</div>
+</section>
+
+
+<!-- 14 -->
+<section class="dua-card c14">
+<span class="dua-number">দোয়া ১৪</span>
+<h3>🌙 আল্লাহর রহমতের দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا وَسِعْتَ كُلَّ شَيْءٍ رَحْمَةً وَعِلْمًا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আপনার রহমত ও জ্ঞান
+সবকিছুকে পরিবেষ্টন করে আছে।
+<div class="source">📖 সূরা গাফির: ৭</div>
+</div>
+</section>
+
+
+<!-- 15 -->
+<section class="dua-card c15">
+<span class="dua-number">দোয়া ১৫</span>
+<h3>💚 বিপদে ধৈর্যের দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের ওপর ধৈর্য ঢেলে দিন।
+<div class="source">📖 সূরা আল-আ'রাফ: ১২৬</div>
+</div>
+</section>
+
+
+<!-- 16 -->
+<section class="dua-card c16">
+<span class="dua-number">দোয়া ১৬</span>
+<h3>🕊️ দুশ্চিন্তা ও কষ্টে দোয়া</h3>
+
+<div class="arabic">
+لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ
+إِنِّي كُنْتُ مِنَ الظَّالِمِينَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আপনি ছাড়া কোনো উপাস্য নেই,
+আপনি পবিত্র। নিশ্চয়ই আমি জালিমদের অন্তর্ভুক্ত ছিলাম।
+<div class="source">📖 সূরা আল-আম্বিয়া: ৮৭</div>
+</div>
+</section>
+
+
+<!-- 17 -->
+<section class="dua-card c17">
+<span class="dua-number">দোয়া ১৭</span>
+<h3>🏠 ঘরে প্রবেশের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلَجِ
+وَخَيْرَ الْمَخْرَجِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আমি আপনার কাছে উত্তম প্রবেশ
+ও উত্তম বের হওয়ার স্থান কামনা করি।
+</div>
+</section>
+
+
+<!-- 18 -->
+<section class="dua-card c18">
+<span class="dua-number">দোয়া ১৮</span>
+<h3>🚪 ঘর থেকে বের হওয়ার দোয়া</h3>
+
+<div class="arabic">
+بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ
+لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আল্লাহর নামে বের হলাম, আল্লাহর ওপর
+ভরসা করলাম। আল্লাহ ছাড়া কোনো শক্তি ও সামর্থ্য নেই।
+</div>
+</section>
+
+
+<!-- 19 -->
+<section class="dua-card c19">
+<span class="dua-number">দোয়া ১৯</span>
+<h3>🍽️ খাবারের আগে</h3>
+
+<div class="arabic">
+بِسْمِ اللَّهِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আল্লাহর নামে।
+</div>
+</section>
+
+
+<!-- 20 -->
+<section class="dua-card c20">
+<span class="dua-number">দোয়া ২০</span>
+<h3>🍵 খাবারের পর</h3>
+
+<div class="arabic">
+الْحَمْدُ لِلَّهِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> সমস্ত প্রশংসা আল্লাহর জন্য।
+</div>
+</section>
+
+
+<!-- 21 -->
+<section class="dua-card c21">
+<span class="dua-number">দোয়া ২১</span>
+<h3>🕌 মসজিদে প্রবেশের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আমার জন্য আপনার রহমতের
+দরজাগুলো খুলে দিন।
+</div>
+</section>
+
+
+<!-- 22 -->
+<section class="dua-card c22">
+<span class="dua-number">দোয়া ২২</span>
+<h3>🚶 মসজিদ থেকে বের হওয়ার দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আমি আপনার অনুগ্রহ প্রার্থনা করি।
+</div>
+</section>
+
+
+<!-- 23 -->
+<section class="dua-card c23">
+<span class="dua-number">দোয়া ২৩</span>
+<h3>🌙 ঘুমানোর দোয়া</h3>
+
+<div class="arabic">
+بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আপনার নামেই আমি মৃত্যুবরণ
+করি এবং জীবিত হই।
+</div>
+</section>
+
+
+<!-- 24 -->
+<section class="dua-card c24">
+<span class="dua-number">দোয়া ২৪</span>
+<h3>🌅 ঘুম থেকে ওঠার দোয়া</h3>
+
+<div class="arabic">
+الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا
+بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> সমস্ত প্রশংসা আল্লাহর, যিনি আমাদের
+মৃত্যুর মতো ঘুমের পর জীবিত করেছেন এবং তাঁর কাছেই ফিরে যেতে হবে।
+</div>
+</section>
+
+
+<!-- 25 -->
+<section class="dua-card c25">
+<span class="dua-number">দোয়া ২৫</span>
+<h3>👕 পোশাক পরার দোয়া</h3>
+
+<div class="arabic">
+الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا
+وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> সমস্ত প্রশংসা আল্লাহর, যিনি আমাকে এই
+পোশাক পরিয়েছেন এবং আমার কোনো শক্তি-সামর্থ্য ছাড়াই তা রিজিক হিসেবে দিয়েছেন।
+</div>
+</section>
+
+
+<!-- 26 -->
+<section class="dua-card c26">
+<span class="dua-number">দোয়া ২৬</span>
+<h3>🚿 পবিত্রতা ও বাথরুমের আদব</h3>
+
+<div class="arabic">
+اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আমি অপবিত্র পুরুষ ও নারী
+শয়তান থেকে আপনার আশ্রয় চাই।
+</div>
+</section>
+
+
+<!-- 27 -->
+<section class="dua-card c27">
+<span class="dua-number">দোয়া ২৭</span>
+<h3>🌿 পবিত্রতা অর্জনের পর</h3>
+
+<div class="arabic">
+غُفْرَانَكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আপনার ক্ষমা প্রার্থনা করছি।
+</div>
+</section>
+
+
+<!-- 28 -->
+<section class="dua-card c28">
+<span class="dua-number">দোয়া ২৮</span>
+<h3>🛣️ সফরের দোয়া</h3>
+
+<div class="arabic">
+سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا
+وَمَا كُنَّا لَهُ مُقْرِنِينَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> পবিত্র তিনি, যিনি এটিকে আমাদের
+অনুগত করে দিয়েছেন; আমরা নিজেরা তা করতে সক্ষম ছিলাম না।
+<div class="source">📖 সূরা আয-যুখরুফ: ১৩</div>
+</div>
+</section>
+
+
+<!-- 29 -->
+<section class="dua-card c29">
+<span class="dua-number">দোয়া ২৯</span>
+<h3>🌧️ বৃষ্টির সময়ের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ صَيِّبًا نَافِعًا
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, এটিকে উপকারী বৃষ্টি করুন।
+</div>
+</section>
+
+
+<!-- 30 -->
+<section class="dua-card c30">
+<span class="dua-number">দোয়া ৩০</span>
+<h3>🌩️ বজ্রপাতের সময়</h3>
+
+<div class="arabic">
+سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> পবিত্র তিনি, যাঁর প্রশংসাসহ বজ্র তাঁর
+পবিত্রতা ঘোষণা করে।
+</div>
+</section>
+
+
+<!-- 31 -->
+<section class="dua-card c31">
+<span class="dua-number">দোয়া ৩১</span>
+<h3>🤒 অসুস্থ ব্যক্তির জন্য</h3>
+
+<div class="arabic">
+أَسْأَلُ اللَّهَ الْعَظِيمَ
+رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> আমি মহান আল্লাহর কাছে প্রার্থনা করি,
+মহান আরশের রব, তিনি যেন আপনাকে সুস্থ করেন।
+</div>
+</section>
+
+
+<!-- 32 -->
+<section class="dua-card c32">
+<span class="dua-number">দোয়া ৩২</span>
+<h3>❤️ রোগমুক্তির দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ
+اشْفِ أَنْتَ الشَّافِي
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে মানুষের রব, কষ্ট দূর করুন।
+আপনিই আরোগ্যদাতা, আপনি আরোগ্য দান করুন।
+</div>
+</section>
+
+
+<!-- 33 -->
+<section class="dua-card c33">
+<span class="dua-number">দোয়া ৩৩</span>
+<h3>😟 বিপদ-আপদের সময়</h3>
+
+<div class="arabic">
+إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> নিশ্চয়ই আমরা আল্লাহর এবং
+নিশ্চয়ই তাঁর কাছেই ফিরে যাব।
+<div class="source">📖 সূরা আল-বাকারা: ১৫৬</div>
+</div>
+</section>
+
+
+<!-- 34 -->
+<section class="dua-card c34">
+<span class="dua-number">দোয়া ৩৪</span>
+<h3>💰 ঋণ থেকে মুক্তির দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ
+وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আপনার হালাল দ্বারা আমাকে
+হারাম থেকে অমুখাপেক্ষী করুন এবং আপনার অনুগ্রহে অন্যদের
+থেকে আমাকে অমুখাপেক্ষী করুন।
+</div>
+</section>
+
+
+<!-- 35 -->
+<section class="dua-card c35">
+<span class="dua-number">দোয়া ৩৫</span>
+<h3>🌿 রিজিকের জন্য দোয়া</h3>
+
+<div class="arabic">
+رَبِّ إِنِّي لِمَا أَنْزَلْتَ إِلَيَّ
+مِنْ خَيْرٍ فَقِيرٌ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমার রব, আপনি আমার প্রতি যে
+কল্যাণ নাজিল করবেন, আমি তার মুখাপেক্ষী।
+<div class="source">📖 সূরা আল-কাসাস: ২৪</div>
+</div>
+</section>
+
+
+<!-- 36 -->
+<section class="dua-card c36">
+<span class="dua-number">দোয়া ৩৬</span>
+<h3>🤝 অন্য মুসলিমের জন্য দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا
+الَّذِينَ سَبَقُونَا بِالْإِيمَانِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের এবং আমাদের
+সেসব ভাইদের ক্ষমা করুন যারা ঈমানে আমাদের আগে অগ্রসর হয়েছে।
+<div class="source">📖 সূরা আল-হাশর: ১০</div>
+</div>
+</section>
+
+
+<!-- 37 -->
+<section class="dua-card c37">
+<span class="dua-number">দোয়া ৩৭</span>
+<h3>🕋 ইবাদতে সাহায্যের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ
+وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আপনার যিকির, আপনার
+শুকরিয়া এবং সুন্দরভাবে আপনার ইবাদত করতে আমাকে সাহায্য করুন।
+</div>
+</section>
+
+
+<!-- 38 -->
+<section class="dua-card c38">
+<span class="dua-number">দোয়া ৩৮</span>
+<h3>🛡️ শয়তান থেকে আশ্রয়ের দোয়া</h3>
+
+<div class="arabic">
+أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> বিতাড়িত শয়তান থেকে আমি আল্লাহর আশ্রয় চাই।
+</div>
+</section>
+
+
+<!-- 39 -->
+<section class="dua-card c39">
+<span class="dua-number">দোয়া ৩৯</span>
+<h3>🌸 উত্তম চরিত্রের দোয়া</h3>
+
+<div class="arabic">
+اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ
+لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আল্লাহ, আমাকে উত্তম চরিত্রের দিকে
+হেদায়াত করুন। আপনি ছাড়া কেউ উত্তম চরিত্রের দিকে হেদায়াত করতে পারেন না।
+</div>
+</section>
+
+
+<!-- 40 -->
+<section class="dua-card c40">
+<span class="dua-number">দোয়া ৪০</span>
+<h3>🤲 সবশেষে কল্যাণ ও ক্ষমার দোয়া</h3>
+
+<div class="arabic">
+رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا
+وَكَفِّرْ عَنَّا سَيِّئَاتِنَا
+وَتَوَفَّنَا مَعَ الْأَبْرَارِ
+</div>
+
+<div class="meaning">
+<strong>অর্থ:</strong> হে আমাদের রব, আমাদের গুনাহ ক্ষমা করুন,
+আমাদের পাপসমূহ মোচন কর
